@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioLan - Simple Suite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-weight: 600;
+            margin: 0;
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .player-card {
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .now-playing {
+            margin-bottom: 20px;
+        }
+
+        .song-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .song-artist {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        audio {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .song-list {
+            list-style: none;
+            padding: 0;
+            max-height: 400px;
+            overflow-y: auto;
+            border-radius: 12px;
+        }
+
+        .song-item {
+            background-color: var(--card-bg);
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .song-item:hover {
+            background-color: #334155;
+            transform: translateX(5px);
+        }
+
+        .song-item.active {
+            border-left: 4px solid var(--accent-color);
+            background-color: #334155;
+        }
+
+        .play-icon {
+            color: var(--accent-color);
+        }
+
+        /* Custom Scrollbar */
+        .song-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .song-list::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RadioLan Simple</h1>
+            <p style="color: var(--text-secondary)">Lightweight LAN Music Streamer</p>
+        </header>
+
+        <div class="player-card">
+            <div class="now-playing">
+                <div class="song-artist">NOW PLAYING</div>
+                <div id="current-song-name" class="song-title">Select a song to start</div>
+            </div>
+            <audio id="audio-player" controls preload="auto"></audio>
+        </div>
+
+        <ul id="song-list" class="song-list">
+            <!-- Songs will be injected here -->
+        </ul>
+    </div>
+
+    <script>
+        const audioPlayer = document.getElementById('audio-player');
+        const songListElement = document.getElementById('song-list');
+        const currentSongName = document.getElementById('current-song-name');
+
+        async function loadSongs() {
+            try {
+                const response = await fetch('/api/songs');
+                const songs = await response.json();
+                
+                if (songs.length === 0) {
+                    songListElement.innerHTML = '<div class="empty-state">No MP3 files found in music folder.</div>';
+                    return;
+                }
+
+                songListElement.innerHTML = '';
+                songs.forEach(song => {
+                    const li = document.createElement('li');
+                    li.className = 'song-item';
+                    li.innerHTML = `
+                        <div class="play-icon">▶</div>
+                        <div>${song}</div>
+                    `;
+                    li.onclick = () => playSong(song, li);
+                    songListElement.appendChild(li);
+                });
+            } catch (error) {
+                console.error('Error loading songs:', error);
+            }
+        }
+
+        function playSong(song, element) {
+            // Update UI
+            document.querySelectorAll('.song-item').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+            currentSongName.textContent = song;
+
+            // Load and play
+            audioPlayer.src = `/stream/${encodeURIComponent(song)}`;
+            audioPlayer.play();
+        }
+
+        loadSongs();
+    </script>
+</body>
+</html>

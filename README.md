@@ -21,7 +21,19 @@ This script will check if Docker is installed and if the daemon is running corre
 
 ## Usage
 
-### Option A: Starting Airsonic (Classic Radio)
+### Option A: RadioLan Simple (Python - Best for LAN) [RECOMMENDED]
+
+A lightweight Python/Flask server with a modern web player. Fastest to start and consume few resources.
+
+To start the simple radio server:
+```bash
+./start_simple.sh
+```
+- **Web UI:** `http://localhost:5000`
+- **Music Folder:** `data/simple_radio/music/`
+- **Setup:** Just drop your `.mp3` files in the folder and refresh the browser.
+
+### Option B: Airsonic (Classic Radio)
 
 To start the Airsonic radio server:
 ```bash
@@ -30,19 +42,20 @@ To start the Airsonic radio server:
 - **Web UI:** `http://localhost:4040`
 - **Default Login:** `admin` / `admin`
 
-### Option B: Starting Jellyfin (Modern Media Center)
+### Option C: Jellyfin (Advanced)
 
 To start the Jellyfin server:
 ```bash
 ./start_jellyfin.sh
 ```
 - **Web UI:** `http://localhost:8096`
-- **Setup:** Follow the on-screen wizard for the first run.
 
 ### Stopping RadioLan
 
 To stop whichever server you are running, use the corresponding script:
 ```bash
+./stop_simple.sh
+# OR
 ./stop_airsonic.sh
 # OR
 ./stop_jellyfin.sh
@@ -50,8 +63,9 @@ To stop whichever server you are running, use the corresponding script:
 
 ## Project Structure
 
-- `data/`: Persistent data for Airsonic and Jellyfin.
-- `check_docker.sh`: Verification script for Docker.
-- `docker-compose.yml`: Config for Airsonic.
-- `docker-compose.jellyfin.yml`: Config for Jellyfin.
+- `data/`: Persistent data and music folders for all servers.
+- `app.py`: Backend for the Simple Radio option.
+- `templates/`: Frontend for the Simple Radio option.
+- `Dockerfile`: Image definition for the Simple Radio.
+- `docker-compose.*.yml`: Configs for the different engines.
 - `start_*.sh` / `stop_*.sh`: Management scripts.

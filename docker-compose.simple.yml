@@ -1,0 +1,11 @@
+services:
+  radio_simple:
+    build: .
+    container_name: radio_lan_simple
+    environment:
+      - MUSIC_DIR=/data/music
+    volumes:
+      - ./data/simple_radio/music:/data/music
+    ports:
+      - 5000:5000
+    restart: unless-stopped
