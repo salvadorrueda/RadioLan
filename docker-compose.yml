@@ -1,0 +1,18 @@
+services:
+  airsonic:
+    image: lscr.io/linuxserver/airsonic-advanced:latest
+    container_name: radio_lan_airsonic
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=CET
+      - JAVA_OPTS=-Xms256m -Xmx512m # Memory optimization
+    volumes:
+      - ./data/airsonic/config:/config
+      - ./data/airsonic/music:/music
+      - ./data/airsonic/playlists:/playlists
+      - ./data/airsonic/podcasts:/podcasts
+      - ./data/airsonic/media:/media
+    ports:
+      - 4040:4040
+    restart: unless-stopped

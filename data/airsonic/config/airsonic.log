@@ -1,0 +1,1221 @@
+2026-02-04 11:14:54.948  WARN --- o.a.p.u.LegacyHsqlMigrationUtil          : Failed to determine HSQLDB database version
+
+java.io.FileNotFoundException: /config/db/airsonic.properties
+	at org.springframework.core.io.FileSystemResource.getInputStream(FileSystemResource.java:196) ~[spring-core-6.1.12.jar!/:6.1.12]
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:134) ~[spring-core-6.1.12.jar!/:6.1.12]
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:123) ~[spring-core-6.1.12.jar!/:6.1.12]
+	at org.airsonic.player.util.LegacyHsqlMigrationUtil.getHsqlDbVersion(LegacyHsqlMigrationUtil.java:32) ~[!/:11.1.4]
+	at org.airsonic.player.util.LegacyHsqlMigrationUtil.isHsqlDbBackupNeeded(LegacyHsqlMigrationUtil.java:64) ~[!/:11.1.4]
+	at org.airsonic.player.util.LegacyHsqlMigrationUtil.upgradeFileHsqlDbIfNeeded(LegacyHsqlMigrationUtil.java:158) ~[!/:11.1.4]
+	at org.airsonic.player.spring.StartupEventListener.onApplicationEvent(StartupEventListener.java:17) ~[!/:11.1.4]
+	at org.airsonic.player.spring.StartupEventListener.onApplicationEvent(StartupEventListener.java:1) ~[!/:11.1.4]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.12.jar!/:6.1.12]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.12.jar!/:6.1.12]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.12.jar!/:6.1.12]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.12.jar!/:6.1.12]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextPrepared(EventPublishingRunListener.java:87) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextPrepared$3(SpringApplicationRunListeners.java:68) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.springframework.boot.SpringApplicationRunListeners.contextPrepared(SpringApplicationRunListeners.java:68) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:402) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:149) ~[spring-boot-3.3.3.jar!/:3.3.3]
+	at org.airsonic.player.Application.main(Application.java:74) ~[!/:11.1.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[airsonic.war:11.1.4]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[airsonic.war:11.1.4]
+	at org.springframework.boot.loader.launch.WarLauncher.main(WarLauncher.java:53) ~[airsonic.war:11.1.4]
+
+2026-02-04 11:14:54.954  INFO --- org.airsonic.player.Application          : Starting Application v11.1.4 using Java 17.0.18 with PID 156 (/app/airsonic/airsonic.war started by abc in /app/airsonic)
+2026-02-04 11:14:54.955  INFO --- org.airsonic.player.Application          : No active profile set, falling back to 1 default profile: "default"
+2026-02-04 11:14:57.221  INFO --- o.a.p.service.SettingsService            : Java: 17.0.18+8-alpine-r0, OS: Linux, Memory (max bytes): 536870912
+2026-02-04 11:14:57.395  INFO --- org.airsonic.player.Application          : Detected Tomcat web server
+2026-02-04 11:15:01.033  INFO --- l.database.core.HsqlDatabase             : Set default schema name to PUBLIC
+2026-02-04 11:15:01.909  INFO --- l.c.StandardChangeLogHistoryService      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2026-02-04 11:15:02.167  INFO --- l.l.StandardLockService                  : Successfully acquired change log lock
+2026-02-04 11:15:02.503  INFO --- l.l.StandardLockService                  : Successfully released change log lock
+2026-02-04 11:15:02.504  INFO --- liquibase.command.CommandScope           : Command execution complete
+2026-02-04 11:15:02.900  INFO --- l.c.StandardChangeLogHistoryService      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2026-02-04 11:15:02.932  INFO --- l.c.StandardChangeLogHistoryService      : Reading from PUBLIC.DATABASECHANGELOG
+2026-02-04 11:15:03.035  INFO --- l.l.StandardLockService                  : Successfully acquired change log lock
+2026-02-04 11:15:03.035  INFO --- l.command.core.UpdateCommandStep         : Using deploymentId: 0200103035
+2026-02-04 11:15:03.037  INFO --- l.c.StandardChangeLogHistoryService      : Reading from PUBLIC.DATABASECHANGELOG
+2026-02-04 11:15:03.091  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema25.xml::schema25_002::muff1nman
+2026-02-04 11:15:03.094  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.106  INFO --- liquibase.changelog.ChangeSet            : Table version created
+2026-02-04 11:15:03.106  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.107  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema25.xml::schema25_002::muff1nman ran successfully in 15ms
+2026-02-04 11:15:03.109  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema25.xml::schema25_003::muff1nman
+2026-02-04 11:15:03.111  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.115  INFO --- liquibase.changelog.ChangeSet            : Table role created
+2026-02-04 11:15:03.116  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.117  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.118  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.118  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.119  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.119  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema25.xml::schema25_003::muff1nman ran successfully in 10ms
+2026-02-04 11:15:03.121  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema25.xml::schema25_004::muff1nman
+2026-02-04 11:15:03.123  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.128  INFO --- liquibase.changelog.ChangeSet            : Table user created
+2026-02-04 11:15:03.129  INFO --- liquibase.changelog.ChangeSet            : New row inserted into user
+2026-02-04 11:15:03.129  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema25.xml::schema25_004::muff1nman ran successfully in 8ms
+2026-02-04 11:15:03.130  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema25.xml::schema25_005::muff1nman
+2026-02-04 11:15:03.132  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.137  INFO --- liquibase.changelog.ChangeSet            : Table user_role created
+2026-02-04 11:15:03.139  INFO --- liquibase.changelog.ChangeSet            : Primary key added to user_role (username,role_id)
+2026-02-04 11:15:03.139  INFO --- liquibase.changelog.ChangeSet            : New row inserted into user_role
+2026-02-04 11:15:03.140  INFO --- liquibase.changelog.ChangeSet            : New row inserted into user_role
+2026-02-04 11:15:03.141  INFO --- liquibase.changelog.ChangeSet            : New row inserted into user_role
+2026-02-04 11:15:03.141  INFO --- liquibase.changelog.ChangeSet            : New row inserted into user_role
+2026-02-04 11:15:03.142  INFO --- liquibase.changelog.ChangeSet            : New row inserted into user_role
+2026-02-04 11:15:03.142  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema25.xml::schema25_005::muff1nman ran successfully in 11ms
+2026-02-04 11:15:03.143  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema26.xml::schema26_001::muff1nman
+2026-02-04 11:15:03.144  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.144  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema26.xml::schema26_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.145  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema26.xml::schema26_002::muff1nman
+2026-02-04 11:15:03.147  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.152  INFO --- liquibase.changelog.ChangeSet            : Table music_folder created
+2026-02-04 11:15:03.153  INFO --- liquibase.changelog.ChangeSet            : New row inserted into music_folder
+2026-02-04 11:15:03.153  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema26.xml::schema26_002::muff1nman ran successfully in 7ms
+2026-02-04 11:15:03.155  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema26.xml::schema26_003::muff1nman
+2026-02-04 11:15:03.156  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.161  INFO --- liquibase.changelog.ChangeSet            : Table music_file_info created
+2026-02-04 11:15:03.162  INFO --- liquibase.changelog.ChangeSet            : Index idx_music_file_info_path created
+2026-02-04 11:15:03.162  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema26.xml::schema26_003::muff1nman ran successfully in 7ms
+2026-02-04 11:15:03.163  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema26.xml::schema26_004::muff1nman
+2026-02-04 11:15:03.165  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.169  INFO --- liquibase.changelog.ChangeSet            : Table internet_radio created
+2026-02-04 11:15:03.170  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema26.xml::schema26_004::muff1nman ran successfully in 7ms
+2026-02-04 11:15:03.171  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema26.xml::schema26_005::muff1nman
+2026-02-04 11:15:03.173  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.179  INFO --- liquibase.changelog.ChangeSet            : Table player created
+2026-02-04 11:15:03.179  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema26.xml::schema26_005::muff1nman ran successfully in 8ms
+2026-02-04 11:15:03.180  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema26.xml::schema26_006::muff1nman
+2026-02-04 11:15:03.186  INFO --- liquibase.changelog.ChangeSet            : Columns dynamic_ip(boolean) added to player
+2026-02-04 11:15:03.186  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema26.xml::schema26_006::muff1nman ran successfully in 5ms
+2026-02-04 11:15:03.188  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema26.xml::schema26_007::muff1nman
+2026-02-04 11:15:03.188  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.190  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:03.190  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema26.xml::schema26_007::muff1nman ran successfully in 2ms
+2026-02-04 11:15:03.190  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema27.xml::schema27_001::muff1nman
+2026-02-04 11:15:03.191  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.191  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema27.xml::schema27_001::muff1nman ran successfully in 0ms
+2026-02-04 11:15:03.192  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema27.xml::schema27_002::muff1nman
+2026-02-04 11:15:03.194  INFO --- liquibase.changelog.ChangeSet            : Columns bytes_streamed(bigint),bytes_downloaded(bigint),bytes_uploaded(bigint) added to user
+2026-02-04 11:15:03.194  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema27.xml::schema27_002::muff1nman ran successfully in 2ms
+2026-02-04 11:15:03.195  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema28.xml::schema28_001::muff1nman
+2026-02-04 11:15:03.196  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.196  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema28.xml::schema28_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.197  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema28.xml::schema28_002::muff1nman
+2026-02-04 11:15:03.199  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.207  INFO --- liquibase.changelog.ChangeSet            : Table user_settings created
+2026-02-04 11:15:03.207  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema28.xml::schema28_002::muff1nman ran successfully in 10ms
+2026-02-04 11:15:03.209  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema28.xml::schema28_003::muff1nman
+2026-02-04 11:15:03.210  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.214  INFO --- liquibase.changelog.ChangeSet            : Table transcoding created
+2026-02-04 11:15:03.215  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.215  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.216  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.216  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.216  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.217  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.217  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.218  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.218  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.219  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:03.219  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema28.xml::schema28_003::muff1nman ran successfully in 10ms
+2026-02-04 11:15:03.220  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema28.xml::schema28_004::muff1nman
+2026-02-04 11:15:03.221  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.225  INFO --- liquibase.changelog.ChangeSet            : Table player_transcoding created
+2026-02-04 11:15:03.226  INFO --- liquibase.changelog.ChangeSet            : Primary key added to player_transcoding (player_id,transcoding_id)
+2026-02-04 11:15:03.226  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema28.xml::schema28_004::muff1nman ran successfully in 6ms
+2026-02-04 11:15:03.227  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema29.xml::schema29_001::muff1nman
+2026-02-04 11:15:03.227  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.228  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema29.xml::schema29_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.228  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema29.xml::schema29_002::muff1nman
+2026-02-04 11:15:03.229  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.233  INFO --- liquibase.changelog.ChangeSet            : Table user_rating created
+2026-02-04 11:15:03.234  INFO --- liquibase.changelog.ChangeSet            : Primary key added to user_rating (username,path)
+2026-02-04 11:15:03.235  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:03.235  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema29.xml::schema29_002::muff1nman ran successfully in 7ms
+2026-02-04 11:15:03.236  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema30.xml::schema30_001::muff1nman
+2026-02-04 11:15:03.237  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.237  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema30.xml::schema30_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.238  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema30.xml::schema30_002::muff1nman
+2026-02-04 11:15:03.243  INFO --- liquibase.changelog.ChangeSet            : Columns last_fm_enabled(boolean),last_fm_username(varchar),last_fm_password(varchar) added to user_settings
+2026-02-04 11:15:03.243  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema30.xml::schema30_002::muff1nman ran successfully in 5ms
+2026-02-04 11:15:03.244  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema30.xml::schema30_003::muff1nman
+2026-02-04 11:15:03.246  INFO --- liquibase.changelog.ChangeSet            : Columns transcode_scheme(varchar) added to user_settings
+2026-02-04 11:15:03.246  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema30.xml::schema30_003::muff1nman ran successfully in 2ms
+2026-02-04 11:15:03.247  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema31.xml::schema31_001::muff1nman
+2026-02-04 11:15:03.248  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.248  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema31.xml::schema31_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.248  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema31.xml::schema31_002::muff1nman
+2026-02-04 11:15:03.249  INFO --- liquibase.changelog.ChangeSet            : Columns enabled(boolean) added to music_file_info
+2026-02-04 11:15:03.249  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema31.xml::schema31_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.250  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema31.xml::schema31_003::muff1nman
+2026-02-04 11:15:03.252  INFO --- liquibase.changelog.ChangeSet            : Columns default_active(boolean) added to transcoding
+2026-02-04 11:15:03.252  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema31.xml::schema31_003::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.252  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema32.xml::schema32_001::muff1nman
+2026-02-04 11:15:03.253  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.253  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema32.xml::schema32_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.253  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema32.xml::schema32_002::muff1nman
+2026-02-04 11:15:03.255  INFO --- liquibase.changelog.ChangeSet            : Columns show_now_playing(boolean) added to user_settings
+2026-02-04 11:15:03.255  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema32.xml::schema32_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.256  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema32.xml::schema32_003::muff1nman
+2026-02-04 11:15:03.257  INFO --- liquibase.changelog.ChangeSet            : Columns selected_music_folder_id(int) added to user_settings
+2026-02-04 11:15:03.257  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema32.xml::schema32_003::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.258  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema32.xml::schema32_004::muff1nman
+2026-02-04 11:15:03.259  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.263  INFO --- liquibase.changelog.ChangeSet            : Table podcast_channel created
+2026-02-04 11:15:03.263  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema32.xml::schema32_004::muff1nman ran successfully in 5ms
+2026-02-04 11:15:03.264  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema32.xml::schema32_005::muff1nman
+2026-02-04 11:15:03.265  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.271  INFO --- liquibase.changelog.ChangeSet            : Table podcast_episode created
+2026-02-04 11:15:03.271  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema32.xml::schema32_005::muff1nman ran successfully in 7ms
+2026-02-04 11:15:03.272  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema32.xml::schema32_006::muff1nman
+2026-02-04 11:15:03.273  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.275  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:03.275  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema32.xml::schema32_006::muff1nman ran successfully in 3ms
+2026-02-04 11:15:03.276  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema33.xml::schema33_001::muff1nman
+2026-02-04 11:15:03.277  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.277  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema33.xml::schema33_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.277  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema33.xml::schema33_002::muff1nman
+2026-02-04 11:15:03.279  INFO --- liquibase.changelog.ChangeSet            : Columns client_side_playlist(boolean) added to player
+2026-02-04 11:15:03.279  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema33.xml::schema33_002::muff1nman ran successfully in 2ms
+2026-02-04 11:15:03.280  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema34.xml::schema34_001::muff1nman
+2026-02-04 11:15:03.281  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.281  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema34.xml::schema34_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.282  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema34.xml::schema34_002::muff1nman
+2026-02-04 11:15:03.284  INFO --- liquibase.changelog.ChangeSet            : Columns ldap_authenticated(boolean) added to user
+2026-02-04 11:15:03.284  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema34.xml::schema34_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.286  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema34.xml::schema34_003::muff1nman
+2026-02-04 11:15:03.288  INFO --- liquibase.changelog.ChangeSet            : Columns party_mode_enabled(boolean) added to user_settings
+2026-02-04 11:15:03.289  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema34.xml::schema34_003::muff1nman ran successfully in 3ms
+2026-02-04 11:15:03.290  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_001::muff1nman
+2026-02-04 11:15:03.291  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:03.291  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.292  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_002::muff1nman
+2026-02-04 11:15:03.294  INFO --- liquibase.changelog.ChangeSet            : Columns now_playing_allowed(boolean) added to user_settings
+2026-02-04 11:15:03.294  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_002::muff1nman ran successfully in 2ms
+2026-02-04 11:15:03.296  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_003::muff1nman
+2026-02-04 11:15:03.298  INFO --- liquibase.changelog.ChangeSet            : Columns web_player_default(boolean) added to user_settings
+2026-02-04 11:15:03.298  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_003::muff1nman ran successfully in 2ms
+2026-02-04 11:15:03.299  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_004::muff1nman
+2026-02-04 11:15:03.301  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:03.301  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:03.302  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_004::muff1nman ran successfully in 3ms
+2026-02-04 11:15:03.303  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_005::muff1nman
+2026-02-04 11:15:03.304  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.310  INFO --- liquibase.changelog.ChangeSet            : Table system_avatar created
+2026-02-04 11:15:03.310  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_005::muff1nman ran successfully in 7ms
+2026-02-04 11:15:03.311  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_006::muff1nman
+2026-02-04 11:15:03.311  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:03.315  INFO --- liquibase.changelog.ChangeSet            : Table custom_avatar created
+2026-02-04 11:15:03.315  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_006::muff1nman ran successfully in 4ms
+2026-02-04 11:15:03.316  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_007::muff1nman
+2026-02-04 11:15:03.317  INFO --- liquibase.changelog.ChangeSet            : Columns avatar_scheme(varchar) added to user_settings
+2026-02-04 11:15:03.317  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_007::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.318  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_008::muff1nman
+2026-02-04 11:15:03.320  INFO --- liquibase.changelog.ChangeSet            : Columns system_avatar_id(int) added to user_settings
+2026-02-04 11:15:03.320  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_008::muff1nman ran successfully in 2ms
+2026-02-04 11:15:03.321  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_009::muff1nman
+2026-02-04 11:15:03.322  INFO --- liquibase.changelog.ChangeSet            : Columns jukebox(boolean) added to player
+2026-02-04 11:15:03.322  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_009::muff1nman ran successfully in 1ms
+2026-02-04 11:15:03.322  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Formal::muff1nman
+2026-02-04 11:15:03.344  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.345  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Formal::muff1nman ran successfully in 22ms
+2026-02-04 11:15:03.345  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Engineer::muff1nman
+2026-02-04 11:15:03.364  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.365  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Engineer::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.365  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Footballer::muff1nman
+2026-02-04 11:15:03.383  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.384  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Footballer::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.384  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Green-Boy::muff1nman
+2026-02-04 11:15:03.404  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.404  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Green-Boy::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.405  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Linux-Zealot::muff1nman
+2026-02-04 11:15:03.422  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.422  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Linux-Zealot::muff1nman ran successfully in 17ms
+2026-02-04 11:15:03.423  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Mac-Zealot::muff1nman
+2026-02-04 11:15:03.441  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.442  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Mac-Zealot::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.442  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Windows-Zealot::muff1nman
+2026-02-04 11:15:03.459  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.460  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Windows-Zealot::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.461  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Army-Officer::muff1nman
+2026-02-04 11:15:03.479  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.480  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Army-Officer::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.480  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Beatnik::muff1nman
+2026-02-04 11:15:03.506  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.506  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Beatnik::muff1nman ran successfully in 26ms
+2026-02-04 11:15:03.507  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_All-Caps::muff1nman
+2026-02-04 11:15:03.525  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.525  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_All-Caps::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.525  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Clown::muff1nman
+2026-02-04 11:15:03.543  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.544  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Clown::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.544  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Commie-Pinko::muff1nman
+2026-02-04 11:15:03.562  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.562  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Commie-Pinko::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.563  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Forum-Flirt::muff1nman
+2026-02-04 11:15:03.581  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.581  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Forum-Flirt::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.582  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Gamer::muff1nman
+2026-02-04 11:15:03.600  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.601  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Gamer::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.601  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Hopelessly-Addicted::muff1nman
+2026-02-04 11:15:03.619  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.620  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Hopelessly-Addicted::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.620  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Jekyll-And-Hyde::muff1nman
+2026-02-04 11:15:03.638  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.639  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Jekyll-And-Hyde::muff1nman ran successfully in 19ms
+2026-02-04 11:15:03.639  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Joker::muff1nman
+2026-02-04 11:15:03.657  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.658  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Joker::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.658  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Lurker::muff1nman
+2026-02-04 11:15:03.676  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.676  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Lurker::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.677  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Moderator::muff1nman
+2026-02-04 11:15:03.695  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.695  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Moderator::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.696  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Newbie::muff1nman
+2026-02-04 11:15:03.714  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.714  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Newbie::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.715  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_No-Dissent::muff1nman
+2026-02-04 11:15:03.732  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.733  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_No-Dissent::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.733  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Performer::muff1nman
+2026-02-04 11:15:03.751  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.751  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Performer::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.752  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Push-My-Button::muff1nman
+2026-02-04 11:15:03.769  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.770  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Push-My-Button::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.770  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Ray-Of-Sunshine::muff1nman
+2026-02-04 11:15:03.788  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.788  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Ray-Of-Sunshine::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.789  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-1::muff1nman
+2026-02-04 11:15:03.807  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.807  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-1::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.807  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-2::muff1nman
+2026-02-04 11:15:03.825  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.825  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-2::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.826  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-3::muff1nman
+2026-02-04 11:15:03.843  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.844  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-3::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.844  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-4::muff1nman
+2026-02-04 11:15:03.862  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.862  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Red-Hot-Chili-Peppers-4::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.863  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Ringmaster::muff1nman
+2026-02-04 11:15:03.880  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.881  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Ringmaster::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.882  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Rumor-Junkie::muff1nman
+2026-02-04 11:15:03.899  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.899  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Rumor-Junkie::muff1nman ran successfully in 17ms
+2026-02-04 11:15:03.900  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Sozzled-Surfer::muff1nman
+2026-02-04 11:15:03.918  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.918  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Sozzled-Surfer::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.919  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Statistician::muff1nman
+2026-02-04 11:15:03.937  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.937  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Statistician::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.937  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Tech-Support::muff1nman
+2026-02-04 11:15:03.955  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.955  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Tech-Support::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.956  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_The-Guru::muff1nman
+2026-02-04 11:15:03.973  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.974  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_The-Guru::muff1nman ran successfully in 18ms
+2026-02-04 11:15:03.974  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_The-Referee::muff1nman
+2026-02-04 11:15:03.999  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:03.999  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_The-Referee::muff1nman ran successfully in 25ms
+2026-02-04 11:15:03.999  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Troll::muff1nman
+2026-02-04 11:15:04.016  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.017  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Troll::muff1nman ran successfully in 18ms
+2026-02-04 11:15:04.018  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Uptight::muff1nman
+2026-02-04 11:15:04.036  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.037  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Uptight::muff1nman ran successfully in 19ms
+2026-02-04 11:15:04.037  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Fire-Guitar::muff1nman
+2026-02-04 11:15:04.055  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.055  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Fire-Guitar::muff1nman ran successfully in 17ms
+2026-02-04 11:15:04.056  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Drum::muff1nman
+2026-02-04 11:15:04.074  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.075  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Drum::muff1nman ran successfully in 19ms
+2026-02-04 11:15:04.075  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Headphones::muff1nman
+2026-02-04 11:15:04.093  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.093  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Headphones::muff1nman ran successfully in 17ms
+2026-02-04 11:15:04.094  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Mic::muff1nman
+2026-02-04 11:15:04.112  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.112  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Mic::muff1nman ran successfully in 18ms
+2026-02-04 11:15:04.113  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Turntable::muff1nman
+2026-02-04 11:15:04.130  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.131  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Turntable::muff1nman ran successfully in 17ms
+2026-02-04 11:15:04.131  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Vinyl::muff1nman
+2026-02-04 11:15:04.150  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.150  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Vinyl::muff1nman ran successfully in 19ms
+2026-02-04 11:15:04.151  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Cool::muff1nman
+2026-02-04 11:15:04.168  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.168  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Cool::muff1nman ran successfully in 17ms
+2026-02-04 11:15:04.169  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Laugh::muff1nman
+2026-02-04 11:15:04.187  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.188  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Laugh::muff1nman ran successfully in 19ms
+2026-02-04 11:15:04.188  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema35.xml::schema35_010_Study::muff1nman
+2026-02-04 11:15:04.205  INFO --- liquibase.changelog.ChangeSet            : New row inserted into system_avatar
+2026-02-04 11:15:04.206  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema35.xml::schema35_010_Study::muff1nman ran successfully in 18ms
+2026-02-04 11:15:04.206  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema36.xml::schema36_001::muff1nman
+2026-02-04 11:15:04.207  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.207  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema36.xml::schema36_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.207  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema36.xml::schema36_002::muff1nman
+2026-02-04 11:15:04.208  INFO --- liquibase.changelog.ChangeSet            : Columns technology(varchar) added to player
+2026-02-04 11:15:04.208  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema36.xml::schema36_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.208  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema37.xml::schema37_001::muff1nman
+2026-02-04 11:15:04.209  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.209  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema37.xml::schema37_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.209  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema37.xml::schema37_002::muff1nman
+2026-02-04 11:15:04.210  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:04.210  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.210  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema37.xml::schema37_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.211  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema37.xml::schema37_003::muff1nman
+2026-02-04 11:15:04.211  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:04.212  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.212  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema37.xml::schema37_003::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.212  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema37.xml::schema37_004::muff1nman
+2026-02-04 11:15:04.213  INFO --- liquibase.changelog.ChangeSet            : Columns changed(datetime) added to music_folder
+2026-02-04 11:15:04.213  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema37.xml::schema37_004::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.214  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema37.xml::schema37_005::muff1nman
+2026-02-04 11:15:04.214  INFO --- liquibase.changelog.ChangeSet            : Columns changed(datetime) added to internet_radio
+2026-02-04 11:15:04.214  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema37.xml::schema37_005::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.215  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema37.xml::schema37_006::muff1nman
+2026-02-04 11:15:04.216  INFO --- liquibase.changelog.ChangeSet            : Columns changed(datetime) added to user_settings
+2026-02-04 11:15:04.216  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema37.xml::schema37_006::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.216  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema38.xml::schema38_001::muff1nman
+2026-02-04 11:15:04.217  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.217  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema38.xml::schema38_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.217  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema38.xml::schema38_002::muff1nman
+2026-02-04 11:15:04.218  INFO --- liquibase.changelog.ChangeSet            : Columns client_id(varchar) added to player
+2026-02-04 11:15:04.218  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema38.xml::schema38_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.218  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema38.xml::schema38_003::muff1nman
+2026-02-04 11:15:04.219  INFO --- liquibase.changelog.ChangeSet            : Columns show_chat(boolean) added to user_settings
+2026-02-04 11:15:04.219  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema38.xml::schema38_003::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.220  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema40.xml::schema40_001::muff1nman
+2026-02-04 11:15:04.220  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.221  INFO --- liquibase.changelog.ChangeSet            : Data updated in user
+2026-02-04 11:15:04.221  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema40.xml::schema40_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.221  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema43.xml::schema43_001::muff1nman
+2026-02-04 11:15:04.222  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.222  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema43.xml::schema43_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.223  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema43.xml::schema43_002::muff1nman
+2026-02-04 11:15:04.223  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.224  INFO --- liquibase.changelog.ChangeSet            : Data deleted from transcoding
+2026-02-04 11:15:04.224  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.225  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.225  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.226  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.226  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.226  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.227  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.227  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.228  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.228  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.229  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.229  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.230  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.230  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.230  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.231  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.231  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.231  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.231  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema43.xml::schema43_002::muff1nman ran successfully in 8ms
+2026-02-04 11:15:04.232  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema43.xml::schema43_003::muff1nman
+2026-02-04 11:15:04.233  INFO --- liquibase.changelog.ChangeSet            : Columns email(varchar) added to user
+2026-02-04 11:15:04.233  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema43.xml::schema43_003::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.233  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema45.xml::schema45_001::muff1nman
+2026-02-04 11:15:04.234  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.234  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema45.xml::schema45_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.234  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema45.xml::schema45_002::muff1nman
+2026-02-04 11:15:04.235  INFO --- liquibase.changelog.ChangeSet            : New row inserted into role
+2026-02-04 11:15:04.235  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.235  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema45.xml::schema45_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.236  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema45.xml::schema45_003::muff1nman
+2026-02-04 11:15:04.237  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.240  INFO --- liquibase.changelog.ChangeSet            : Table share created
+2026-02-04 11:15:04.240  INFO --- liquibase.changelog.ChangeSet            : Index idx_share_name created
+2026-02-04 11:15:04.241  INFO --- liquibase.changelog.ChangeSet            : Table share_file created
+2026-02-04 11:15:04.241  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema45.xml::schema45_003::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.241  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema46.xml::schema46_001::muff1nman
+2026-02-04 11:15:04.242  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.242  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema46.xml::schema46_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.242  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema46.xml::schema46_002::muff1nman
+2026-02-04 11:15:04.243  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.247  INFO --- liquibase.changelog.ChangeSet            : Table transcoding2 created
+2026-02-04 11:15:04.247  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding2
+2026-02-04 11:15:04.247  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding2
+2026-02-04 11:15:04.247  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema46.xml::schema46_002::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.248  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema46.xml::schema46_003::muff1nman
+2026-02-04 11:15:04.249  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.253  INFO --- liquibase.changelog.ChangeSet            : Table player_transcoding2 created
+2026-02-04 11:15:04.253  INFO --- liquibase.changelog.ChangeSet            : Primary key added to player_transcoding2 (player_id,transcoding_id)
+2026-02-04 11:15:04.254  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.254  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema46.xml::schema46_003::muff1nman ran successfully in 6ms
+2026-02-04 11:15:04.255  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema46.xml::schema46_004::muff1nman
+2026-02-04 11:15:04.255  INFO --- liquibase.changelog.ChangeSet            : Columns default_active(boolean) added to transcoding2
+2026-02-04 11:15:04.256  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema46.xml::schema46_004::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.256  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_001::muff1nman
+2026-02-04 11:15:04.256  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.256  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_001::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.258  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_002::muff1nman
+2026-02-04 11:15:04.258  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.263  INFO --- liquibase.changelog.ChangeSet            : Table media_file created
+2026-02-04 11:15:04.264  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_path created
+2026-02-04 11:15:04.264  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_parent_path created
+2026-02-04 11:15:04.264  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_type created
+2026-02-04 11:15:04.264  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_album created
+2026-02-04 11:15:04.265  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_artist created
+2026-02-04 11:15:04.265  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_album_artist created
+2026-02-04 11:15:04.265  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_present created
+2026-02-04 11:15:04.266  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_genre created
+2026-02-04 11:15:04.266  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_play_count created
+2026-02-04 11:15:04.266  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_created created
+2026-02-04 11:15:04.266  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_last_played created
+2026-02-04 11:15:04.267  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_002::muff1nman ran successfully in 9ms
+2026-02-04 11:15:04.267  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_003::muff1nman
+2026-02-04 11:15:04.268  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.273  INFO --- liquibase.changelog.ChangeSet            : Table artist created
+2026-02-04 11:15:04.273  INFO --- liquibase.changelog.ChangeSet            : Index idx_artist_name created
+2026-02-04 11:15:04.274  INFO --- liquibase.changelog.ChangeSet            : Index idx_artist_present created
+2026-02-04 11:15:04.274  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_003::muff1nman ran successfully in 7ms
+2026-02-04 11:15:04.274  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_004::muff1nman
+2026-02-04 11:15:04.275  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.279  INFO --- liquibase.changelog.ChangeSet            : Table album created
+2026-02-04 11:15:04.280  INFO --- liquibase.changelog.ChangeSet            : Index idx_album_artist_name created
+2026-02-04 11:15:04.280  INFO --- liquibase.changelog.ChangeSet            : Index idx_album_play_count created
+2026-02-04 11:15:04.280  INFO --- liquibase.changelog.ChangeSet            : Index idx_album_last_played created
+2026-02-04 11:15:04.280  INFO --- liquibase.changelog.ChangeSet            : Index idx_album_present created
+2026-02-04 11:15:04.280  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_004::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.281  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_005::muff1nman
+2026-02-04 11:15:04.287  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.288  INFO --- liquibase.changelog.ChangeSet            : Index idx_album_name created
+2026-02-04 11:15:04.288  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_005::muff1nman ran successfully in 7ms
+2026-02-04 11:15:04.289  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_006::muff1nman
+2026-02-04 11:15:04.290  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.294  INFO --- liquibase.changelog.ChangeSet            : Table starred_media_file created
+2026-02-04 11:15:04.294  INFO --- liquibase.changelog.ChangeSet            : Index idx_starred_media_file_media_file_id created
+2026-02-04 11:15:04.294  INFO --- liquibase.changelog.ChangeSet            : Index idx_starred_media_file_username created
+2026-02-04 11:15:04.295  INFO --- liquibase.changelog.ChangeSet            : Unique constraint added to starred_media_file(media_file_id,username)
+2026-02-04 11:15:04.295  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_006::muff1nman ran successfully in 6ms
+2026-02-04 11:15:04.296  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_007::muff1nman
+2026-02-04 11:15:04.297  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.301  INFO --- liquibase.changelog.ChangeSet            : Table starred_album created
+2026-02-04 11:15:04.301  INFO --- liquibase.changelog.ChangeSet            : Index idx_starred_album_album_id created
+2026-02-04 11:15:04.301  INFO --- liquibase.changelog.ChangeSet            : Index idx_starred_album_username created
+2026-02-04 11:15:04.301  INFO --- liquibase.changelog.ChangeSet            : Unique constraint added to starred_album(album_id,username)
+2026-02-04 11:15:04.301  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_007::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.302  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_008::muff1nman
+2026-02-04 11:15:04.303  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.307  INFO --- liquibase.changelog.ChangeSet            : Table starred_artist created
+2026-02-04 11:15:04.307  INFO --- liquibase.changelog.ChangeSet            : Index idx_starred_artist_artist_id created
+2026-02-04 11:15:04.308  INFO --- liquibase.changelog.ChangeSet            : Index idx_starred_artist_username created
+2026-02-04 11:15:04.308  INFO --- liquibase.changelog.ChangeSet            : Unique constraint added to starred_artist(artist_id,username)
+2026-02-04 11:15:04.308  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_008::muff1nman ran successfully in 6ms
+2026-02-04 11:15:04.309  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_009::muff1nman
+2026-02-04 11:15:04.310  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.315  INFO --- liquibase.changelog.ChangeSet            : Table playlist created
+2026-02-04 11:15:04.315  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_009::muff1nman ran successfully in 6ms
+2026-02-04 11:15:04.316  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_010::muff1nman
+2026-02-04 11:15:04.317  INFO --- liquibase.changelog.ChangeSet            : Columns imported_from(varchar) added to playlist
+2026-02-04 11:15:04.317  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_010::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.317  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_011::muff1nman
+2026-02-04 11:15:04.318  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.322  INFO --- liquibase.changelog.ChangeSet            : Table playlist_file created
+2026-02-04 11:15:04.322  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_011::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.323  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_012::muff1nman
+2026-02-04 11:15:04.324  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.328  INFO --- liquibase.changelog.ChangeSet            : Table playlist_user created
+2026-02-04 11:15:04.328  INFO --- liquibase.changelog.ChangeSet            : Unique constraint added to playlist_user(playlist_id,username)
+2026-02-04 11:15:04.328  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_012::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.329  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema47.xml::schema47_013::muff1nman
+2026-02-04 11:15:04.330  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.334  INFO --- liquibase.changelog.ChangeSet            : Table bookmark created
+2026-02-04 11:15:04.334  INFO --- liquibase.changelog.ChangeSet            : Index idx_bookmark_media_file_id created
+2026-02-04 11:15:04.334  INFO --- liquibase.changelog.ChangeSet            : Index idx_bookmark_username created
+2026-02-04 11:15:04.335  INFO --- liquibase.changelog.ChangeSet            : Unique constraint added to bookmark(media_file_id,username)
+2026-02-04 11:15:04.335  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema47.xml::schema47_013::muff1nman ran successfully in 6ms
+2026-02-04 11:15:04.335  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema49.xml::schema49_001::muff1nman
+2026-02-04 11:15:04.336  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.336  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema49.xml::schema49_001::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.336  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema49.xml::schema49_002::muff1nman
+2026-02-04 11:15:04.337  INFO --- liquibase.changelog.ChangeSet            : Columns year(int) added to album
+2026-02-04 11:15:04.337  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema49.xml::schema49_002::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.338  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema49.xml::schema49_003::muff1nman
+2026-02-04 11:15:04.338  INFO --- liquibase.changelog.ChangeSet            : Columns genre(varchar) added to album
+2026-02-04 11:15:04.338  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema49.xml::schema49_003::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.339  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema49.xml::schema49_004::muff1nman
+2026-02-04 11:15:04.340  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.344  INFO --- liquibase.changelog.ChangeSet            : Table genre created
+2026-02-04 11:15:04.344  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema49.xml::schema49_004::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.344  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema49.xml::schema49_005::muff1nman
+2026-02-04 11:15:04.345  INFO --- liquibase.changelog.ChangeSet            : Columns album_count(int) added to genre
+2026-02-04 11:15:04.345  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema49.xml::schema49_005::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.345  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema50.xml::schema50_001::muff1nman
+2026-02-04 11:15:04.346  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.346  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding2
+2026-02-04 11:15:04.347  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.347  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema50.xml::schema50_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.347  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema50.xml::schema50_002::muff1nman
+2026-02-04 11:15:04.348  INFO --- liquibase.changelog.ChangeSet            : Columns song_notification(boolean) added to user_settings
+2026-02-04 11:15:04.348  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema50.xml::schema50_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.349  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema50.xml::schema50_003::muff1nman
+2026-02-04 11:15:04.350  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.350  INFO --- liquibase.changelog.ChangeSet            : Data updated in transcoding2
+2026-02-04 11:15:04.350  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema50.xml::schema50_003::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.351  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema51.xml::schema51_001::muff1nman
+2026-02-04 11:15:04.352  INFO --- liquibase.changelog.ChangeSet            : Marking ChangeSet: "liquibase/legacy/schema51.xml::schema51_001::muff1nman" as ran despite precondition failure due to onFail='MARK_RAN': 
+          liquibase/db-changelog.xml : SQL Precondition failed.  Expected '0' got '1'
+
+2026-02-04 11:15:04.353  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema51.xml::schema51_002::muff1nman
+2026-02-04 11:15:04.354  INFO --- liquibase.changelog.ChangeSet            : Columns show_artist_info(boolean) added to user_settings
+2026-02-04 11:15:04.354  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema51.xml::schema51_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.355  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema51.xml::schema51_003::muff1nman
+2026-02-04 11:15:04.356  INFO --- liquibase.changelog.ChangeSet            : Columns auto_hide_play_queue(boolean) added to user_settings
+2026-02-04 11:15:04.356  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema51.xml::schema51_003::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.356  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema51.xml::schema51_004::muff1nman
+2026-02-04 11:15:04.357  INFO --- liquibase.changelog.ChangeSet            : Columns view_as_list(boolean) added to user_settings
+2026-02-04 11:15:04.357  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema51.xml::schema51_004::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.358  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema52.xml::schema52_001::muff1nman
+2026-02-04 11:15:04.358  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.358  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema52.xml::schema52_001::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.359  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema52.xml::schema52_002::muff1nman
+2026-02-04 11:15:04.360  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.364  INFO --- liquibase.changelog.ChangeSet            : Table music_folder_user created
+2026-02-04 11:15:04.364  INFO --- liquibase.changelog.ChangeSet            : Index idx_music_folder_user_username created
+2026-02-04 11:15:04.365  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.365  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema52.xml::schema52_002::muff1nman ran successfully in 6ms
+2026-02-04 11:15:04.366  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema52.xml::schema52_003::muff1nman
+2026-02-04 11:15:04.366  INFO --- liquibase.changelog.ChangeSet            : Columns folder_id(int) added to album
+2026-02-04 11:15:04.366  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema52.xml::schema52_003::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.367  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema52.xml::schema52_004::muff1nman
+2026-02-04 11:15:04.368  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.372  INFO --- liquibase.changelog.ChangeSet            : Table play_queue created
+2026-02-04 11:15:04.372  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema52.xml::schema52_004::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.373  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema52.xml::schema52_005::muff1nman
+2026-02-04 11:15:04.374  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.378  INFO --- liquibase.changelog.ChangeSet            : Table play_queue_file created
+2026-02-04 11:15:04.378  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema52.xml::schema52_005::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.379  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema53.xml::schema53_001::muff1nman
+2026-02-04 11:15:04.379  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.379  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema53.xml::schema53_001::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.380  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema53.xml::schema53_002::muff1nman
+2026-02-04 11:15:04.386  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.387  INFO --- liquibase.changelog.ChangeSet            : Index idx_podcast_episode_url created
+2026-02-04 11:15:04.387  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema53.xml::schema53_002::muff1nman ran successfully in 7ms
+2026-02-04 11:15:04.388  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema53.xml::schema53_003::muff1nman
+2026-02-04 11:15:04.393  INFO --- liquibase.changelog.ChangeSet            : Columns default_album_list(varchar) added to user_settings
+2026-02-04 11:15:04.393  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema53.xml::schema53_003::muff1nman ran successfully in 5ms
+2026-02-04 11:15:04.394  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema53.xml::schema53_004::muff1nman
+2026-02-04 11:15:04.395  INFO --- liquibase.changelog.ChangeSet            : Columns queue_following_songs(boolean) added to user_settings
+2026-02-04 11:15:04.396  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema53.xml::schema53_004::muff1nman ran successfully in 2ms
+2026-02-04 11:15:04.396  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema53.xml::schema53_005::muff1nman
+2026-02-04 11:15:04.397  INFO --- liquibase.changelog.ChangeSet            : Columns image_url(varchar) added to podcast_channel
+2026-02-04 11:15:04.397  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema53.xml::schema53_005::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.397  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema53.xml::schema53_006::muff1nman
+2026-02-04 11:15:04.399  INFO --- liquibase.changelog.ChangeSet            : Columns show_side_bar(boolean) added to user_settings
+2026-02-04 11:15:04.399  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema53.xml::schema53_006::muff1nman ran successfully in 2ms
+2026-02-04 11:15:04.399  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema53.xml::schema53_007::muff1nman
+2026-02-04 11:15:04.400  INFO --- liquibase.changelog.ChangeSet            : Columns folder_id(int) added to artist
+2026-02-04 11:15:04.400  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema53.xml::schema53_007::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.400  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema61.xml::schema61_001::muff1nman
+2026-02-04 11:15:04.401  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.401  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema61.xml::schema61_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.401  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema61.xml::schema61_002::muff1nman
+2026-02-04 11:15:04.402  INFO --- liquibase.changelog.ChangeSet            : Columns list_reload_delay(int) added to user_settings
+2026-02-04 11:15:04.403  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema61.xml::schema61_002::muff1nman ran successfully in 2ms
+2026-02-04 11:15:04.403  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema61.xml::schema61_003::muff1nman
+2026-02-04 11:15:04.404  INFO --- liquibase.changelog.ChangeSet            : Columns keyboard_shortcuts_enabled(boolean) added to user_settings
+2026-02-04 11:15:04.405  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema61.xml::schema61_003::muff1nman ran successfully in 2ms
+2026-02-04 11:15:04.405  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema62.xml::schema62_001::muff1nman
+2026-02-04 11:15:04.406  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.406  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema62.xml::schema62_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.406  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema62.xml::schema62_002::muff1nman
+2026-02-04 11:15:04.407  INFO --- liquibase.changelog.ChangeSet            : Columns m3u_bom_enabled(boolean) added to player
+2026-02-04 11:15:04.407  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema62.xml::schema62_002::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.407  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/legacy/schema100.xml::schema100_001::muff1nman
+2026-02-04 11:15:04.408  INFO --- liquibase.changelog.ChangeSet            : New row inserted into version
+2026-02-04 11:15:04.408  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/legacy/schema100.xml::schema100_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.408  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/6.2/remove-show-chat.xml::remove-show-chat_001::muff1nman
+2026-02-04 11:15:04.409  INFO --- liquibase.changelog.ChangeSet            : Column user_settings.show_chat dropped
+2026-02-04 11:15:04.409  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/6.2/remove-show-chat.xml::remove-show-chat_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.410  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/6.2/add-user-pagination.xml::add-user-pagination_001::muff1nman
+2026-02-04 11:15:04.411  INFO --- liquibase.changelog.ChangeSet            : Columns pagination_size(int) added to user_settings
+2026-02-04 11:15:04.411  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/6.2/add-user-pagination.xml::add-user-pagination_001::muff1nman ran successfully in 1ms
+2026-02-04 11:15:04.412  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/6.3/add-player-mixer.xml::add-player-mixer_001::biconou
+2026-02-04 11:15:04.412  INFO --- liquibase.changelog.ChangeSet            : Columns mixer(varchar) added to player
+2026-02-04 11:15:04.413  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/6.3/add-player-mixer.xml::add-player-mixer_001::biconou ran successfully in 1ms
+2026-02-04 11:15:04.413  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/6.3/mediaelement.xml::mediaelement_001::muff1nman
+2026-02-04 11:15:04.413  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding2
+2026-02-04 11:15:04.413  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/6.3/mediaelement.xml::mediaelement_001::muff1nman ran successfully in 0ms
+2026-02-04 11:15:04.414  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/6.4/add-media-file-mb-release-id.xml::add-media-file-mb-release-id::fxthomas
+2026-02-04 11:15:04.415  INFO --- liquibase.changelog.ChangeSet            : Columns mb_release_id(varchar) added to media_file
+2026-02-04 11:15:04.415  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/6.4/add-media-file-mb-release-id.xml::add-media-file-mb-release-id::fxthomas ran successfully in 1ms
+2026-02-04 11:15:04.415  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/6.4/add-album-mb-release-id.xml::add-album-mb-release-id::fxthomas
+2026-02-04 11:15:04.416  INFO --- liquibase.changelog.ChangeSet            : Columns mb_release_id(varchar) added to album
+2026-02-04 11:15:04.416  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/6.4/add-album-mb-release-id.xml::add-album-mb-release-id::fxthomas ran successfully in 1ms
+2026-02-04 11:15:04.417  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/10.6/add-media-file-mb-recording-id.xml::add-media-file-mb-recording-id::BestSteve
+2026-02-04 11:15:04.418  INFO --- liquibase.changelog.ChangeSet            : Columns mb_recording_id(varchar) added to media_file
+2026-02-04 11:15:04.418  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/10.6/add-media-file-mb-recording-id.xml::add-media-file-mb-recording-id::BestSteve ran successfully in 1ms
+2026-02-04 11:15:04.418  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/10.6/support-listenbrainz.xml::support-listenbrainz::BestSteve
+2026-02-04 11:15:04.420  INFO --- liquibase.changelog.ChangeSet            : Columns listenbrainz_enabled(boolean),listenbrainz_token(varchar) added to user_settings
+2026-02-04 11:15:04.420  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/10.6/support-listenbrainz.xml::support-listenbrainz::BestSteve ran successfully in 2ms
+2026-02-04 11:15:04.421  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/10.6/expand-durations.xml::add-durations-to-mediafile::anon
+2026-02-04 11:15:04.422  INFO --- liquibase.changelog.ChangeSet            : Columns duration(double) added to media_file
+2026-02-04 11:15:04.422  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.422  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/10.6/expand-durations.xml::add-durations-to-mediafile::anon ran successfully in 1ms
+2026-02-04 11:15:04.423  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/10.6/expand-durations.xml::add-durations-to-album::anon
+2026-02-04 11:15:04.424  INFO --- liquibase.changelog.ChangeSet            : Columns duration(double) added to album
+2026-02-04 11:15:04.424  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.424  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/10.6/expand-durations.xml::add-durations-to-album::anon ran successfully in 1ms
+2026-02-04 11:15:04.425  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/10.6/expand-durations.xml::add-durations-to-playlist::anon
+2026-02-04 11:15:04.426  INFO --- liquibase.changelog.ChangeSet            : Columns duration(double) added to playlist
+2026-02-04 11:15:04.426  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.426  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/10.6/expand-durations.xml::add-durations-to-playlist::anon ran successfully in 1ms
+2026-02-04 11:15:04.427  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/10.6/user-credentials.xml::add-user-credentials::anon
+2026-02-04 11:15:04.428  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.432  INFO --- liquibase.changelog.ChangeSet            : Table user_credentials created
+2026-02-04 11:15:04.434  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.435  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.437  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.437  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/10.6/user-credentials.xml::add-user-credentials::anon ran successfully in 10ms
+2026-02-04 11:15:04.438  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/10.6/user-credentials.xml::trim-user-credentials-encoder::anon
+2026-02-04 11:15:04.438  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.439  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/10.6/user-credentials.xml::trim-user-credentials-encoder::anon ran successfully in 1ms
+2026-02-04 11:15:04.439  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::user-credentials-timestamps-1::anon
+2026-02-04 11:15:04.440  INFO --- liquibase.changelog.ChangeSet            : user_credentials.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.441  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::user-credentials-timestamps-1::anon ran successfully in 1ms
+2026-02-04 11:15:04.441  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::user-credentials-timestamps-2::anon
+2026-02-04 11:15:04.442  INFO --- liquibase.changelog.ChangeSet            : user_credentials.updated datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.442  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::user-credentials-timestamps-2::anon ran successfully in 1ms
+2026-02-04 11:15:04.442  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::user-credentials-timestamps-3::anon
+2026-02-04 11:15:04.443  INFO --- liquibase.changelog.ChangeSet            : user_credentials.expiration datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.443  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::user-credentials-timestamps-3::anon ran successfully in 0ms
+2026-02-04 11:15:04.444  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema26-timestamps-1::anon
+2026-02-04 11:15:04.444  INFO --- liquibase.changelog.ChangeSet            : music_file_info.last_played datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.444  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema26-timestamps-1::anon ran successfully in 0ms
+2026-02-04 11:15:04.445  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema26-timestamps-2::anon
+2026-02-04 11:15:04.445  INFO --- liquibase.changelog.ChangeSet            : player.last_seen datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.445  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema26-timestamps-2::anon ran successfully in 0ms
+2026-02-04 11:15:04.446  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema32-timestamps-1::anon
+2026-02-04 11:15:04.446  INFO --- liquibase.changelog.ChangeSet            : podcast_episode.publish_date datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.446  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema32-timestamps-1::anon ran successfully in 0ms
+2026-02-04 11:15:04.446  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema35-timestamps-1::anon
+2026-02-04 11:15:04.447  INFO --- liquibase.changelog.ChangeSet            : system_avatar.created_date datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.447  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema35-timestamps-1::anon ran successfully in 1ms
+2026-02-04 11:15:04.447  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema35-timestamps-2::anon
+2026-02-04 11:15:04.448  INFO --- liquibase.changelog.ChangeSet            : custom_avatar.created_date datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.448  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema35-timestamps-2::anon ran successfully in 1ms
+2026-02-04 11:15:04.448  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema37-timestamps-1::anon
+2026-02-04 11:15:04.448  INFO --- liquibase.changelog.ChangeSet            : music_folder.changed datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.448  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema37-timestamps-1::anon ran successfully in 0ms
+2026-02-04 11:15:04.449  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema37-timestamps-2::anon
+2026-02-04 11:15:04.449  INFO --- liquibase.changelog.ChangeSet            : internet_radio.changed datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.449  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema37-timestamps-2::anon ran successfully in 0ms
+2026-02-04 11:15:04.450  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema37-timestamps-3::anon
+2026-02-04 11:15:04.450  INFO --- liquibase.changelog.ChangeSet            : user_settings.changed datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.450  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema37-timestamps-3::anon ran successfully in 0ms
+2026-02-04 11:15:04.451  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema45-timestamps-1::anon
+2026-02-04 11:15:04.451  INFO --- liquibase.changelog.ChangeSet            : share.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.451  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema45-timestamps-1::anon ran successfully in 0ms
+2026-02-04 11:15:04.451  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema45-timestamps-2::anon
+2026-02-04 11:15:04.452  INFO --- liquibase.changelog.ChangeSet            : share.expires datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.452  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema45-timestamps-2::anon ran successfully in 1ms
+2026-02-04 11:15:04.452  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema45-timestamps-3::anon
+2026-02-04 11:15:04.452  INFO --- liquibase.changelog.ChangeSet            : share.last_visited datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.452  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema45-timestamps-3::anon ran successfully in 0ms
+2026-02-04 11:15:04.453  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-1::anon
+2026-02-04 11:15:04.453  INFO --- liquibase.changelog.ChangeSet            : media_file.last_played datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.453  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-1::anon ran successfully in 0ms
+2026-02-04 11:15:04.454  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-2::anon
+2026-02-04 11:15:04.454  INFO --- liquibase.changelog.ChangeSet            : media_file.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.454  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-2::anon ran successfully in 0ms
+2026-02-04 11:15:04.454  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-3::anon
+2026-02-04 11:15:04.455  INFO --- liquibase.changelog.ChangeSet            : media_file.changed datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.455  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-3::anon ran successfully in 1ms
+2026-02-04 11:15:04.455  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-4::anon
+2026-02-04 11:15:04.455  INFO --- liquibase.changelog.ChangeSet            : media_file.last_scanned datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.456  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-4::anon ran successfully in 0ms
+2026-02-04 11:15:04.456  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-5::anon
+2026-02-04 11:15:04.456  INFO --- liquibase.changelog.ChangeSet            : media_file.children_last_updated datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.456  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-5::anon ran successfully in 0ms
+2026-02-04 11:15:04.457  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-6::anon
+2026-02-04 11:15:04.457  INFO --- liquibase.changelog.ChangeSet            : artist.last_scanned datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.457  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-6::anon ran successfully in 0ms
+2026-02-04 11:15:04.458  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-7::anon
+2026-02-04 11:15:04.458  INFO --- liquibase.changelog.ChangeSet            : album.last_played datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.458  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-7::anon ran successfully in 0ms
+2026-02-04 11:15:04.458  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-8::anon
+2026-02-04 11:15:04.459  INFO --- liquibase.changelog.ChangeSet            : album.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.459  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-8::anon ran successfully in 1ms
+2026-02-04 11:15:04.459  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-9::anon
+2026-02-04 11:15:04.460  INFO --- liquibase.changelog.ChangeSet            : album.last_scanned datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.460  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-9::anon ran successfully in 1ms
+2026-02-04 11:15:04.460  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-10::anon
+2026-02-04 11:15:04.460  INFO --- liquibase.changelog.ChangeSet            : starred_media_file.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.460  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-10::anon ran successfully in 0ms
+2026-02-04 11:15:04.461  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-11::anon
+2026-02-04 11:15:04.461  INFO --- liquibase.changelog.ChangeSet            : starred_album.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.461  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-11::anon ran successfully in 0ms
+2026-02-04 11:15:04.462  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-12::anon
+2026-02-04 11:15:04.462  INFO --- liquibase.changelog.ChangeSet            : starred_artist.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.462  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-12::anon ran successfully in 0ms
+2026-02-04 11:15:04.463  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-13::anon
+2026-02-04 11:15:04.463  INFO --- liquibase.changelog.ChangeSet            : playlist.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.463  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-13::anon ran successfully in 0ms
+2026-02-04 11:15:04.464  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-14::anon
+2026-02-04 11:15:04.464  INFO --- liquibase.changelog.ChangeSet            : playlist.changed datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.464  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-14::anon ran successfully in 0ms
+2026-02-04 11:15:04.465  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-15::anon
+2026-02-04 11:15:04.465  INFO --- liquibase.changelog.ChangeSet            : bookmark.created datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.465  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-15::anon ran successfully in 0ms
+2026-02-04 11:15:04.466  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-16::anon
+2026-02-04 11:15:04.466  INFO --- liquibase.changelog.ChangeSet            : bookmark.changed datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.466  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema47-timestamps-16::anon ran successfully in 0ms
+2026-02-04 11:15:04.467  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema52-timestamps-1::anon
+2026-02-04 11:15:04.467  INFO --- liquibase.changelog.ChangeSet            : play_queue.changed datatype was changed to java.sql.Types.TIMESTAMP(9)
+2026-02-04 11:15:04.467  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/hsqldb-timestamp-precision.xml::legacy-schema52-timestamps-1::anon ran successfully in 0ms
+2026-02-04 11:15:04.468  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-player-columns.xml::drop-player-cover-art-scheme::anon
+2026-02-04 11:15:04.468  INFO --- liquibase.changelog.ChangeSet            : Column player.cover_art_scheme dropped
+2026-02-04 11:15:04.468  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-player-columns.xml::drop-player-cover-art-scheme::anon ran successfully in 0ms
+2026-02-04 11:15:04.469  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-player-columns.xml::drop-player-client-side-playlist::anon
+2026-02-04 11:15:04.470  INFO --- liquibase.changelog.ChangeSet            : Column player.client_side_playlist dropped
+2026-02-04 11:15:04.470  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-player-columns.xml::drop-player-client-side-playlist::anon ran successfully in 1ms
+2026-02-04 11:15:04.470  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-player-columns.xml::drop-player-jukebox::anon
+2026-02-04 11:15:04.471  INFO --- liquibase.changelog.ChangeSet            : Column player.jukebox dropped
+2026-02-04 11:15:04.471  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-player-columns.xml::drop-player-jukebox::anon ran successfully in 1ms
+2026-02-04 11:15:04.471  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/rename-play-queue-current-id.xml::rename-play-queue-current::anon
+2026-02-04 11:15:04.472  INFO --- liquibase.changelog.ChangeSet            : Column play_queue.current renamed to current_media_file_id
+2026-02-04 11:15:04.472  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/rename-play-queue-current-id.xml::rename-play-queue-current::anon ran successfully in 1ms
+2026-02-04 11:15:04.473  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-rename-transcoding.xml::drop-player-transcoding::anon
+2026-02-04 11:15:04.475  INFO --- liquibase.changelog.ChangeSet            : Table player_transcoding dropped
+2026-02-04 11:15:04.475  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-rename-transcoding.xml::drop-player-transcoding::anon ran successfully in 2ms
+2026-02-04 11:15:04.475  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-rename-transcoding.xml::rename-player-transcoding2::anon
+2026-02-04 11:15:04.477  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.481  INFO --- liquibase.changelog.ChangeSet            : Table player_transcoding2 renamed to player_transcoding
+2026-02-04 11:15:04.481  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-rename-transcoding.xml::rename-player-transcoding2::anon ran successfully in 6ms
+2026-02-04 11:15:04.482  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-rename-transcoding.xml::drop-transcoding::anon
+2026-02-04 11:15:04.484  INFO --- liquibase.changelog.ChangeSet            : Table transcoding dropped
+2026-02-04 11:15:04.484  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-rename-transcoding.xml::drop-transcoding::anon ran successfully in 2ms
+2026-02-04 11:15:04.484  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-rename-transcoding.xml::rename-transcoding2::anon
+2026-02-04 11:15:04.486  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.490  INFO --- liquibase.changelog.ChangeSet            : Table transcoding2 renamed to transcoding
+2026-02-04 11:15:04.490  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-rename-transcoding.xml::rename-transcoding2::anon ran successfully in 6ms
+2026-02-04 11:15:04.490  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-duration-seconds.xml::drop-duration-seconds-from-mediafile::anon
+2026-02-04 11:15:04.491  INFO --- liquibase.changelog.ChangeSet            : Column media_file.duration_seconds dropped
+2026-02-04 11:15:04.491  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-duration-seconds.xml::drop-duration-seconds-from-mediafile::anon ran successfully in 1ms
+2026-02-04 11:15:04.492  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-duration-seconds.xml::drop-duration-seconds-from-album::anon
+2026-02-04 11:15:04.500  INFO --- liquibase.changelog.ChangeSet            : Column album.duration_seconds dropped
+2026-02-04 11:15:04.500  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-duration-seconds.xml::drop-duration-seconds-from-album::anon ran successfully in 8ms
+2026-02-04 11:15:04.501  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/drop-duration-seconds.xml::drop-duration-seconds-from-playlist::anon
+2026-02-04 11:15:04.502  INFO --- liquibase.changelog.ChangeSet            : Column playlist.duration_seconds dropped
+2026-02-04 11:15:04.502  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/drop-duration-seconds.xml::drop-duration-seconds-from-playlist::anon ran successfully in 1ms
+2026-02-04 11:15:04.502  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/user-settings-json.xml::create-user-settings-json::anon
+2026-02-04 11:15:04.504  INFO --- liquibase.changelog.ChangeSet            : Table user_settings2 created
+2026-02-04 11:15:04.504  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/user-settings-json.xml::create-user-settings-json::anon ran successfully in 2ms
+2026-02-04 11:15:04.504  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/user-settings-json.xml::populate-user-settings-json::anon
+2026-02-04 11:15:04.506  INFO --- liquibase.changelog.ChangeSet            : Table user_settings2 (for json) populated from user_settings
+2026-02-04 11:15:04.506  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/user-settings-json.xml::populate-user-settings-json::anon ran successfully in 2ms
+2026-02-04 11:15:04.507  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/user-settings-json.xml::drop-non-json-user-settings::anon
+2026-02-04 11:15:04.508  INFO --- liquibase.changelog.ChangeSet            : Table user_settings dropped
+2026-02-04 11:15:04.509  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/user-settings-json.xml::drop-non-json-user-settings::anon ran successfully in 2ms
+2026-02-04 11:15:04.509  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/user-settings-json.xml::rename-user-settings-json::anon
+2026-02-04 11:15:04.510  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.515  INFO --- liquibase.changelog.ChangeSet            : Table user_settings2 renamed to user_settings
+2026-02-04 11:15:04.515  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/user-settings-json.xml::rename-user-settings-json::anon ran successfully in 6ms
+2026-02-04 11:15:04.515  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/user-roles-json.xml::create-user-roles-json::anon
+2026-02-04 11:15:04.516  INFO --- liquibase.changelog.ChangeSet            : Columns roles(clob) added to user
+2026-02-04 11:15:04.517  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/user-roles-json.xml::create-user-roles-json::anon ran successfully in 2ms
+2026-02-04 11:15:04.517  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/user-roles-json.xml::populate-user-roles-json::anon
+2026-02-04 11:15:04.564  INFO --- liquibase.changelog.ChangeSet            : Column user.roles (for json) populated from user_role
+2026-02-04 11:15:04.565  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/user-roles-json.xml::populate-user-roles-json::anon ran successfully in 48ms
+2026-02-04 11:15:04.566  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/user-roles-json.xml::drop-non-json-user-roles::anon
+2026-02-04 11:15:04.568  INFO --- liquibase.changelog.ChangeSet            : Table user_role dropped
+2026-02-04 11:15:04.568  INFO --- liquibase.changelog.ChangeSet            : Table role dropped
+2026-02-04 11:15:04.569  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/user-roles-json.xml::drop-non-json-user-roles::anon ran successfully in 3ms
+2026-02-04 11:15:04.569  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/remove-password-column.xml::remove-user-password-column::anon
+2026-02-04 11:15:04.570  INFO --- liquibase.changelog.ChangeSet            : Column user.password dropped
+2026-02-04 11:15:04.570  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/remove-password-column.xml::remove-user-password-column::anon ran successfully in 1ms
+2026-02-04 11:15:04.571  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/add-sonos-table-link.xml::add-sonos-table-link::nacrylic
+2026-02-04 11:15:04.572  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.577  INFO --- liquibase.changelog.ChangeSet            : Table sonoslink created
+2026-02-04 11:15:04.577  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/add-sonos-table-link.xml::add-sonos-table-link::nacrylic ran successfully in 6ms
+2026-02-04 11:15:04.577  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/podcast-description-text.xml::podcast-channel-description::anon
+2026-02-04 11:15:04.578  INFO --- liquibase.changelog.ChangeSet            : podcast_channel.description datatype was changed to text
+2026-02-04 11:15:04.578  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/podcast-description-text.xml::podcast-channel-description::anon ran successfully in 1ms
+2026-02-04 11:15:04.579  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/podcast-description-text.xml::podcast-episode-description::anon
+2026-02-04 11:15:04.579  INFO --- liquibase.changelog.ChangeSet            : podcast_episode.description datatype was changed to text
+2026-02-04 11:15:04.579  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/podcast-description-text.xml::podcast-episode-description::anon ran successfully in 0ms
+2026-02-04 11:15:04.580  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/insert-mod-transcoding.xml::insert-mod-transcoding::anon
+2026-02-04 11:15:04.581  INFO --- liquibase.changelog.ChangeSet            : New row inserted into transcoding
+2026-02-04 11:15:04.581  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/insert-mod-transcoding.xml::insert-mod-transcoding::anon ran successfully in 1ms
+2026-02-04 11:15:04.582  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/add-player-id-autoincrement.xml::add-player-id-autoincrement::anon
+2026-02-04 11:15:04.582  INFO --- liquibase.changelog.ChangeSet            : Auto-increment added to player.id
+2026-02-04 11:15:04.582  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/add-player-id-autoincrement.xml::add-player-id-autoincrement::anon ran successfully in 0ms
+2026-02-04 11:15:04.583  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/remove-java-jukebox.xml::remove-player-mixer::anon
+2026-02-04 11:15:04.583  INFO --- liquibase.changelog.ChangeSet            : Column player.mixer dropped
+2026-02-04 11:15:04.583  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/remove-java-jukebox.xml::remove-player-mixer::anon ran successfully in 0ms
+2026-02-04 11:15:04.584  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/remove-java-jukebox.xml::convert-jukeboxes::anon
+2026-02-04 11:15:04.585  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.585  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/remove-java-jukebox.xml::convert-jukeboxes::anon ran successfully in 1ms
+2026-02-04 11:15:04.585  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/podcast-channel-rules.xml::podcast-channel-rules::anon
+2026-02-04 11:15:04.586  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.590  INFO --- liquibase.changelog.ChangeSet            : Table podcast_channel_rules created
+2026-02-04 11:15:04.590  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/podcast-channel-rules.xml::podcast-channel-rules::anon ran successfully in 5ms
+2026-02-04 11:15:04.591  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/avatar-storage.xml::add-system-avatar-paths::anon
+2026-02-04 11:15:04.593  INFO --- liquibase.changelog.ChangeSet            : Columns path(varchar) added to system_avatar
+2026-02-04 11:15:04.597  INFO --- liquibase.changelog.ChangeSet            : NOT NULL constraint has been added to system_avatar.path
+2026-02-04 11:15:04.597  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/avatar-storage.xml::add-system-avatar-paths::anon ran successfully in 6ms
+2026-02-04 11:15:04.598  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/avatar-storage.xml::drop-system-avatar-data::anon
+2026-02-04 11:15:04.600  INFO --- liquibase.changelog.ChangeSet            : Column system_avatar.data dropped
+2026-02-04 11:15:04.600  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/avatar-storage.xml::drop-system-avatar-data::anon ran successfully in 2ms
+2026-02-04 11:15:04.601  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/avatar-storage.xml::add-custom-avatar-paths::anon
+2026-02-04 11:15:04.603  INFO --- liquibase.changelog.ChangeSet            : Columns path(varchar) added to custom_avatar
+2026-02-04 11:15:04.604  INFO --- liquibase.changelog.ChangeSet            : NOT NULL constraint has been added to custom_avatar.path
+2026-02-04 11:15:04.604  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/avatar-storage.xml::add-custom-avatar-paths::anon ran successfully in 3ms
+2026-02-04 11:15:04.604  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/avatar-storage.xml::extract-custom-avatar::anon
+2026-02-04 11:15:04.605  INFO --- liquibase.changelog.ChangeSet            : Extracted avatars from DB
+2026-02-04 11:15:04.605  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/avatar-storage.xml::extract-custom-avatar::anon ran successfully in 1ms
+2026-02-04 11:15:04.606  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/avatar-storage.xml::drop-custom-avatar-data::anon
+2026-02-04 11:15:04.606  INFO --- liquibase.changelog.ChangeSet            : Column custom_avatar.data dropped
+2026-02-04 11:15:04.606  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/avatar-storage.xml::drop-custom-avatar-data::anon ran successfully in 0ms
+2026-02-04 11:15:04.607  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/move-user-table.xml::move-user-table::anon
+2026-02-04 11:15:04.609  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.612  INFO --- liquibase.changelog.ChangeSet            : Table user renamed to users
+2026-02-04 11:15:04.612  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/move-user-table.xml::move-user-table::anon ran successfully in 5ms
+2026-02-04 11:15:04.613  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/add-wavpack.xml::add-wavpack::yetangitu
+2026-02-04 11:15:04.614  INFO --- liquibase.changelog.ChangeSet            : Data updated in transcoding
+2026-02-04 11:15:04.614  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/add-wavpack.xml::add-wavpack::yetangitu ran successfully in 1ms
+2026-02-04 11:15:04.615  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/podcast-episode-guid.xml::podcast-episode-guid::anon
+2026-02-04 11:15:04.616  INFO --- liquibase.changelog.ChangeSet            : Columns episode_guid(varchar) added to podcast_episode
+2026-02-04 11:15:04.616  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/podcast-episode-guid.xml::podcast-episode-guid::anon ran successfully in 1ms
+2026-02-04 11:15:04.617  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-type-to-media-folder::anon
+2026-02-04 11:15:04.618  INFO --- liquibase.changelog.ChangeSet            : Columns type(varchar) added to music_folder
+2026-02-04 11:15:04.618  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-type-to-media-folder::anon ran successfully in 1ms
+2026-02-04 11:15:04.619  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-podcast-media-folder::anon
+2026-02-04 11:15:04.619  INFO --- liquibase.changelog.ChangeSet            : New row inserted into music_folder
+2026-02-04 11:15:04.621  INFO --- liquibase.changelog.ChangeSet            : Added podcast media folder users
+2026-02-04 11:15:04.621  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-podcast-media-folder::anon ran successfully in 2ms
+2026-02-04 11:15:04.621  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-unknown-media-folders::anon
+2026-02-04 11:15:04.624  INFO --- liquibase.changelog.ChangeSet            : Added unknown music folders
+2026-02-04 11:15:04.624  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-unknown-media-folders::anon ran successfully in 3ms
+2026-02-04 11:15:04.624  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::unique-media-folders::anon
+2026-02-04 11:15:04.642  INFO --- liquibase.changelog.ChangeSet            : Media folder uniqueness established by path
+2026-02-04 11:15:04.642  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::unique-media-folders::anon ran successfully in 17ms
+2026-02-04 11:15:04.643  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-uniqueness-constraint-to-media-folders-path::anon
+2026-02-04 11:15:04.645  INFO --- liquibase.changelog.ChangeSet            : Index idx_music_folder_path created
+2026-02-04 11:15:04.645  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-uniqueness-constraint-to-media-folders-path::anon ran successfully in 2ms
+2026-02-04 11:15:04.646  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-podcast-channel::anon
+2026-02-04 11:15:04.647  INFO --- liquibase.changelog.ChangeSet            : Columns media_file_id(int) added to podcast_channel
+2026-02-04 11:15:04.648  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to podcast_channel (media_file_id)
+2026-02-04 11:15:04.648  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-podcast-channel::anon ran successfully in 2ms
+2026-02-04 11:15:04.649  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::populate-podcast-channel-media-file-id::anon
+2026-02-04 11:15:04.651  INFO --- liquibase.changelog.ChangeSet            : Added media file ids to podcast channels
+2026-02-04 11:15:04.651  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::populate-podcast-channel-media-file-id::anon ran successfully in 2ms
+2026-02-04 11:15:04.652  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-podcast-episode::anon
+2026-02-04 11:15:04.655  INFO --- liquibase.changelog.ChangeSet            : Columns media_file_id(int) added to podcast_episode
+2026-02-04 11:15:04.655  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to podcast_episode (media_file_id)
+2026-02-04 11:15:04.656  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-podcast-episode::anon ran successfully in 2ms
+2026-02-04 11:15:04.656  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-path-from-podcast-episode::anon
+2026-02-04 11:15:04.657  INFO --- liquibase.changelog.ChangeSet            : Column podcast_episode.path dropped
+2026-02-04 11:15:04.658  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::drop-path-from-podcast-episode::anon ran successfully in 2ms
+2026-02-04 11:15:04.658  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::clean-user-rating-for-absent-paths::anon
+2026-02-04 11:15:04.660  INFO --- liquibase.changelog.ChangeSet            : Data deleted from user_rating
+2026-02-04 11:15:04.660  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::clean-user-rating-for-absent-paths::anon ran successfully in 1ms
+2026-02-04 11:15:04.661  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-user-rating::anon
+2026-02-04 11:15:04.663  INFO --- liquibase.changelog.ChangeSet            : Columns media_file_id(int) added to user_rating
+2026-02-04 11:15:04.663  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-user-rating::anon ran successfully in 2ms
+2026-02-04 11:15:04.664  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::populate-user-rating-media-file-id::anon
+2026-02-04 11:15:04.665  INFO --- liquibase.changelog.ChangeSet            : Marking ChangeSet: "liquibase/11.0/relative-media-file-paths.xml::populate-user-rating-media-file-id::anon" as ran despite precondition failure due to onFail='MARK_RAN': 
+          liquibase/db-changelog.xml : Not precondition failed
+
+2026-02-04 11:15:04.666  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-user-rating-media-file-id-fk::anon
+2026-02-04 11:15:04.668  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.669  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to user_rating (media_file_id)
+2026-02-04 11:15:04.670  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-user-rating-media-file-id-fk::anon ran successfully in 4ms
+2026-02-04 11:15:04.671  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-user-rating-user-fk::anon
+2026-02-04 11:15:04.675  INFO --- liquibase.changelog.ChangeSet            : Dropped constraint
+2026-02-04 11:15:04.675  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::drop-user-rating-user-fk::anon ran successfully in 4ms
+2026-02-04 11:15:04.676  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-user-rating-path-pk::anon
+2026-02-04 11:15:04.679  INFO --- liquibase.changelog.ChangeSet            : Primary key dropped from user_rating
+2026-02-04 11:15:04.679  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::drop-user-rating-path-pk::anon ran successfully in 3ms
+2026-02-04 11:15:04.679  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-path-from-user-rating::anon
+2026-02-04 11:15:04.680  INFO --- liquibase.changelog.ChangeSet            : Column user_rating.path dropped
+2026-02-04 11:15:04.680  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::drop-path-from-user-rating::anon ran successfully in 0ms
+2026-02-04 11:15:04.681  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::clean-user-rating-for-uniqueness::anon
+2026-02-04 11:15:04.682  INFO --- liquibase.changelog.ChangeSet            : Data deleted from user_rating
+2026-02-04 11:15:04.682  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::clean-user-rating-for-uniqueness::anon ran successfully in 1ms
+2026-02-04 11:15:04.683  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-user-rating-user-fk::anon
+2026-02-04 11:15:04.685  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to user_rating (username)
+2026-02-04 11:15:04.685  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-user-rating-user-fk::anon ran successfully in 2ms
+2026-02-04 11:15:04.686  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-user-rating-pk::anon
+2026-02-04 11:15:04.687  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.689  INFO --- liquibase.changelog.ChangeSet            : Primary key added to user_rating (username,media_file_id)
+2026-02-04 11:15:04.690  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-user-rating-pk::anon ran successfully in 4ms
+2026-02-04 11:15:04.690  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::clean-share-file-for-absent-paths::anon
+2026-02-04 11:15:04.691  INFO --- liquibase.changelog.ChangeSet            : Data deleted from share_file
+2026-02-04 11:15:04.691  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::clean-share-file-for-absent-paths::anon ran successfully in 1ms
+2026-02-04 11:15:04.692  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-share-file::anon
+2026-02-04 11:15:04.693  INFO --- liquibase.changelog.ChangeSet            : Columns media_file_id(int) added to share_file
+2026-02-04 11:15:04.694  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to share_file (media_file_id)
+2026-02-04 11:15:04.694  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-media-file-id-to-share-file::anon ran successfully in 2ms
+2026-02-04 11:15:04.695  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-path-from-share-file::anon
+2026-02-04 11:15:04.696  INFO --- liquibase.changelog.ChangeSet            : Column share_file.path dropped
+2026-02-04 11:15:04.696  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::drop-path-from-share-file::anon ran successfully in 1ms
+2026-02-04 11:15:04.696  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-folder-id-to-media-file::anon
+2026-02-04 11:15:04.697  INFO --- liquibase.changelog.ChangeSet            : Columns folder_id(int) added to media_file
+2026-02-04 11:15:04.697  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-folder-id-to-media-file::anon ran successfully in 1ms
+2026-02-04 11:15:04.698  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::populate-folder-id-in-media-file-for-mysql-mariadb::anon
+2026-02-04 11:15:04.698  INFO --- liquibase.changelog.ChangeSet            : Marking ChangeSet: "liquibase/11.0/relative-media-file-paths.xml::populate-folder-id-in-media-file-for-mysql-mariadb::anon" as ran despite precondition failure due to onFail='MARK_RAN': 
+          liquibase/db-changelog.xml : DBMS Precondition failed: expected mariadb,mysql, got hsqldb
+
+2026-02-04 11:15:04.699  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::delete-case-sensitive-paths-in-media-file-for-not-mysql-mariadb::anon
+2026-02-04 11:15:04.701  INFO --- liquibase.changelog.ChangeSet            : Marking ChangeSet: "liquibase/11.0/relative-media-file-paths.xml::delete-case-sensitive-paths-in-media-file-for-not-mysql-mariadb::anon" as ran despite precondition failure due to onFail='MARK_RAN': 
+          liquibase/db-changelog.xml : Not precondition failed
+
+2026-02-04 11:15:04.702  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::populate-folder-id-in-media-file-for-not-mysql-mariadb::anon
+2026-02-04 11:15:04.704  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.704  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::populate-folder-id-in-media-file-for-not-mysql-mariadb::anon ran successfully in 2ms
+2026-02-04 11:15:04.706  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::remove-media-files-with-non-existent-folders::anon
+2026-02-04 11:15:04.707  INFO --- liquibase.changelog.ChangeSet            : Data deleted from media_file
+2026-02-04 11:15:04.707  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::remove-media-files-with-non-existent-folders::anon ran successfully in 1ms
+2026-02-04 11:15:04.707  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-uniqueness-constraint-to-media-file-path::anon
+2026-02-04 11:15:04.718  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_path dropped from table media_file
+2026-02-04 11:15:04.718  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::drop-uniqueness-constraint-to-media-file-path::anon ran successfully in 11ms
+2026-02-04 11:15:04.719  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-uniqueness-constraint-to-media-file-path-2::anon
+2026-02-04 11:15:04.720  INFO --- liquibase.changelog.ChangeSet            : Marking ChangeSet: "liquibase/11.0/relative-media-file-paths.xml::drop-uniqueness-constraint-to-media-file-path-2::anon" as ran despite precondition failure due to onFail='MARK_RAN': 
+          liquibase/db-changelog.xml : Not precondition failed
+
+2026-02-04 11:15:04.721  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::relativize-media-file-path::anon
+2026-02-04 11:15:04.722  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.723  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.723  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::relativize-media-file-path::anon ran successfully in 2ms
+2026-02-04 11:15:04.723  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::relativize-media-file-cover-art-path::anon
+2026-02-04 11:15:04.724  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.725  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.725  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::relativize-media-file-cover-art-path::anon ran successfully in 2ms
+2026-02-04 11:15:04.725  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::relativize-media-file-parent-path::anon
+2026-02-04 11:15:04.726  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.727  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.727  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.727  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::relativize-media-file-parent-path::anon ran successfully in 2ms
+2026-02-04 11:15:04.728  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-uniqueness-constraint-to-relative-media-file-path::anon
+2026-02-04 11:15:04.729  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.730  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_folder_path created
+2026-02-04 11:15:04.730  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-uniqueness-constraint-to-relative-media-file-path::anon ran successfully in 2ms
+2026-02-04 11:15:04.730  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::drop-folder-from-media-file::anon
+2026-02-04 11:15:04.731  INFO --- liquibase.changelog.ChangeSet            : Column media_file.folder dropped
+2026-02-04 11:15:04.731  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::drop-folder-from-media-file::anon ran successfully in 1ms
+2026-02-04 11:15:04.732  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::remove-albums-with-non-existent-folders::anon
+2026-02-04 11:15:04.733  INFO --- liquibase.changelog.ChangeSet            : Data deleted from album
+2026-02-04 11:15:04.733  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::remove-albums-with-non-existent-folders::anon ran successfully in 1ms
+2026-02-04 11:15:04.734  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::relativize-album-cover-art-path::anon
+2026-02-04 11:15:04.735  INFO --- liquibase.changelog.ChangeSet            : Data updated in album
+2026-02-04 11:15:04.736  INFO --- liquibase.changelog.ChangeSet            : Data updated in album
+2026-02-04 11:15:04.736  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::relativize-album-cover-art-path::anon ran successfully in 2ms
+2026-02-04 11:15:04.737  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::relativize-album-path::anon
+2026-02-04 11:15:04.738  INFO --- liquibase.changelog.ChangeSet            : Data updated in album
+2026-02-04 11:15:04.739  INFO --- liquibase.changelog.ChangeSet            : Data updated in album
+2026-02-04 11:15:04.739  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::relativize-album-path::anon ran successfully in 2ms
+2026-02-04 11:15:04.740  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::remove-artists-with-non-existent-folders::anon
+2026-02-04 11:15:04.740  INFO --- liquibase.changelog.ChangeSet            : Data deleted from artist
+2026-02-04 11:15:04.741  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::remove-artists-with-non-existent-folders::anon ran successfully in 0ms
+2026-02-04 11:15:04.741  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::relativize-artist-cover-art-path::anon
+2026-02-04 11:15:04.742  INFO --- liquibase.changelog.ChangeSet            : Data updated in artist
+2026-02-04 11:15:04.742  INFO --- liquibase.changelog.ChangeSet            : Data updated in artist
+2026-02-04 11:15:04.742  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::relativize-artist-cover-art-path::anon ran successfully in 1ms
+2026-02-04 11:15:04.743  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/relative-media-file-paths.xml::add-music-folder-names-to-media-file::anon
+2026-02-04 11:15:04.744  INFO --- liquibase.changelog.ChangeSet            : Data updated in media_file
+2026-02-04 11:15:04.744  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/relative-media-file-paths.xml::add-music-folder-names-to-media-file::anon ran successfully in 1ms
+2026-02-04 11:15:04.744  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cover-art-table.xml::add-cover-art-table::anon
+2026-02-04 11:15:04.745  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.750  INFO --- liquibase.changelog.ChangeSet            : Table cover_art created
+2026-02-04 11:15:04.751  INFO --- liquibase.changelog.ChangeSet            : Primary key added to cover_art (entity_id,entity_type)
+2026-02-04 11:15:04.751  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cover-art-table.xml::add-cover-art-table::anon ran successfully in 7ms
+2026-02-04 11:15:04.751  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cover-art-table.xml::populate-cover-art-from-media-file::anon
+2026-02-04 11:15:04.753  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.753  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cover-art-table.xml::populate-cover-art-from-media-file::anon ran successfully in 2ms
+2026-02-04 11:15:04.754  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cover-art-table.xml::drop-cover-art-path-from-media-file::anon
+2026-02-04 11:15:04.755  INFO --- liquibase.changelog.ChangeSet            : Column media_file.cover_art_path dropped
+2026-02-04 11:15:04.755  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cover-art-table.xml::drop-cover-art-path-from-media-file::anon ran successfully in 1ms
+2026-02-04 11:15:04.755  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cover-art-table.xml::populate-cover-art-from-album::anon
+2026-02-04 11:15:04.757  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.757  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cover-art-table.xml::populate-cover-art-from-album::anon ran successfully in 2ms
+2026-02-04 11:15:04.758  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cover-art-table.xml::drop-cover-art-path-from-album::anon
+2026-02-04 11:15:04.759  INFO --- liquibase.changelog.ChangeSet            : Column album.cover_art_path dropped
+2026-02-04 11:15:04.759  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cover-art-table.xml::drop-cover-art-path-from-album::anon ran successfully in 1ms
+2026-02-04 11:15:04.760  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cover-art-table.xml::populate-cover-art-from-artist::anon
+2026-02-04 11:15:04.762  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.762  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cover-art-table.xml::populate-cover-art-from-artist::anon ran successfully in 2ms
+2026-02-04 11:15:04.762  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cover-art-table.xml::drop-cover-art-path-from-artist::anon
+2026-02-04 11:15:04.763  INFO --- liquibase.changelog.ChangeSet            : Column artist.cover_art_path dropped
+2026-02-04 11:15:04.763  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cover-art-table.xml::drop-cover-art-path-from-artist::anon ran successfully in 1ms
+2026-02-04 11:15:04.764  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/media-file-music-folder-link.xml::drop-music-folder-user-fk::anon
+2026-02-04 11:15:04.767  INFO --- liquibase.changelog.ChangeSet            : Dropped constraint
+2026-02-04 11:15:04.767  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/media-file-music-folder-link.xml::drop-music-folder-user-fk::anon ran successfully in 3ms
+2026-02-04 11:15:04.768  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/media-file-music-folder-link.xml::add-music-folder-user-fk-with-update::anon
+2026-02-04 11:15:04.770  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to music_folder_user (music_folder_id)
+2026-02-04 11:15:04.771  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/media-file-music-folder-link.xml::add-music-folder-user-fk-with-update::anon ran successfully in 3ms
+2026-02-04 11:15:04.771  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/media-file-music-folder-link.xml::delete-absent-music-folder-media-file::anon
+2026-02-04 11:15:04.772  INFO --- liquibase.changelog.ChangeSet            : Data deleted from media_file
+2026-02-04 11:15:04.772  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/media-file-music-folder-link.xml::delete-absent-music-folder-media-file::anon ran successfully in 0ms
+2026-02-04 11:15:04.773  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/media-file-music-folder-link.xml::add-music-folder-media-file-fk-with-update::anon
+2026-02-04 11:15:04.775  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to media_file (folder_id)
+2026-02-04 11:15:04.775  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/media-file-music-folder-link.xml::add-music-folder-media-file-fk-with-update::anon ran successfully in 2ms
+2026-02-04 11:15:04.775  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/delete-first-player.xml::delete-first-player::anon
+2026-02-04 11:15:04.776  INFO --- liquibase.changelog.ChangeSet            : Marking ChangeSet: "liquibase/11.0/delete-first-player.xml::delete-first-player::anon" as ran despite precondition failure due to onFail='MARK_RAN': 
+          liquibase/db-changelog.xml : SQL Precondition failed.  Expected '1' got '0'
+
+2026-02-04 11:15:04.777  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/explicit-fk-indices.xml::explicit-fk-indices::anon
+2026-02-04 11:15:04.778  INFO --- liquibase.changelog.ChangeSet            : Index idx_custom_avatar_username created
+2026-02-04 11:15:04.778  INFO --- liquibase.changelog.ChangeSet            : Index idx_music_folder_user_music_folder_id created
+2026-02-04 11:15:04.778  INFO --- liquibase.changelog.ChangeSet            : Index idx_player_transcoding_transcoding_id created
+2026-02-04 11:15:04.779  INFO --- liquibase.changelog.ChangeSet            : Index idx_player_transcoding_player_id created
+2026-02-04 11:15:04.779  INFO --- liquibase.changelog.ChangeSet            : Index idx_playlist_username created
+2026-02-04 11:15:04.779  INFO --- liquibase.changelog.ChangeSet            : Index idx_playlist_file_playlist_id created
+2026-02-04 11:15:04.779  INFO --- liquibase.changelog.ChangeSet            : Index idx_playlist_file_media_file_id created
+2026-02-04 11:15:04.780  INFO --- liquibase.changelog.ChangeSet            : Index idx_playlist_user_username created
+2026-02-04 11:15:04.780  INFO --- liquibase.changelog.ChangeSet            : Index idx_play_queue_username created
+2026-02-04 11:15:04.780  INFO --- liquibase.changelog.ChangeSet            : Index idx_play_queue_file_media_file_id created
+2026-02-04 11:15:04.780  INFO --- liquibase.changelog.ChangeSet            : Index idx_play_queue_file_play_queue_id created
+2026-02-04 11:15:04.780  INFO --- liquibase.changelog.ChangeSet            : Index idx_podcast_channel_media_file_id created
+2026-02-04 11:15:04.781  INFO --- liquibase.changelog.ChangeSet            : Index idx_podcast_episode_media_file_id created
+2026-02-04 11:15:04.781  INFO --- liquibase.changelog.ChangeSet            : Index idx_podcast_episode_channel_id created
+2026-02-04 11:15:04.781  INFO --- liquibase.changelog.ChangeSet            : Index idx_share_username created
+2026-02-04 11:15:04.781  INFO --- liquibase.changelog.ChangeSet            : Index idx_share_file_share_id created
+2026-02-04 11:15:04.782  INFO --- liquibase.changelog.ChangeSet            : Index idx_share_file_media_file_id created
+2026-02-04 11:15:04.782  INFO --- liquibase.changelog.ChangeSet            : Index idx_user_credentials_username created
+2026-02-04 11:15:04.782  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/explicit-fk-indices.xml::explicit-fk-indices::anon ran successfully in 5ms
+2026-02-04 11:15:04.783  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/podcast-episode-indices.xml::podcast-episode-indices::anon
+2026-02-04 11:15:04.784  INFO --- liquibase.changelog.ChangeSet            : Index idx_podcast_episode_episode_guid created
+2026-02-04 11:15:04.784  INFO --- liquibase.changelog.ChangeSet            : Index idx_podcast_episode_publish_date created
+2026-02-04 11:15:04.784  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/podcast-episode-indices.xml::podcast-episode-indices::anon ran successfully in 0ms
+2026-02-04 11:15:04.785  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cue-support.xml::startposition_001::yetangitu
+2026-02-04 11:15:04.786  INFO --- liquibase.changelog.ChangeSet            : Columns start_position(double) added to media_file
+2026-02-04 11:15:04.786  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cue-support.xml::startposition_001::yetangitu ran successfully in 1ms
+2026-02-04 11:15:04.787  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cue-support.xml::drop-music-folder-media-file-fk-with-update::kagemomiji
+2026-02-04 11:15:04.789  INFO --- liquibase.changelog.ChangeSet            : Foreign key mfi_mfo_id_fk dropped
+2026-02-04 11:15:04.789  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cue-support.xml::drop-music-folder-media-file-fk-with-update::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.789  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cue-support.xml::dropuniqueindexfolderpath_001::kagemomiji
+2026-02-04 11:15:04.800  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_folder_path dropped from table media_file
+2026-02-04 11:15:04.801  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cue-support.xml::dropuniqueindexfolderpath_001::kagemomiji ran successfully in 12ms
+2026-02-04 11:15:04.801  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cue-support.xml::revert-music-folder-media-file-fk-with-update::kagemomiji
+2026-02-04 11:15:04.803  INFO --- liquibase.changelog.ChangeSet            : Foreign key constraint added to media_file (folder_id)
+2026-02-04 11:15:04.803  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cue-support.xml::revert-music-folder-media-file-fk-with-update::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.804  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cue-support.xml::adduniqueindexstartposition_001::yetangitu
+2026-02-04 11:15:04.804  INFO --- liquibase.changelog.ChangeSet            : Index idx_media_file_start_position created
+2026-02-04 11:15:04.804  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cue-support.xml::adduniqueindexstartposition_001::yetangitu ran successfully in 0ms
+2026-02-04 11:15:04.805  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cue-support.xml::indexpath_001::yetangitu
+2026-02-04 11:15:04.806  INFO --- liquibase.changelog.ChangeSet            : Columns index_path(varchar) added to media_file
+2026-02-04 11:15:04.806  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cue-support.xml::indexpath_001::yetangitu ran successfully in 1ms
+2026-02-04 11:15:04.807  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.0/cue-support.xml::addsplittingtranscoder_001::yetangitu
+2026-02-04 11:15:04.808  INFO --- liquibase.changelog.ChangeSet            : Data updated in transcoding
+2026-02-04 11:15:04.808  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.0/cue-support.xml::addsplittingtranscoder_001::yetangitu ran successfully in 1ms
+2026-02-04 11:15:04.808  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/add-user-credentials-id.xml::rename-user_credentials-to-backup::kagemomiji
+2026-02-04 11:15:04.809  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.810  INFO --- liquibase.changelog.ChangeSet            : Table user_credentials renamed to user_credentials_backup
+2026-02-04 11:15:04.810  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/add-user-credentials-id.xml::rename-user_credentials-to-backup::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.811  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/add-user-credentials-id.xml::create-new-user_credentials-table::kagemomiji
+2026-02-04 11:15:04.813  INFO --- liquibase.changelog.ChangeSet            : Table user_credentials created
+2026-02-04 11:15:04.813  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/add-user-credentials-id.xml::create-new-user_credentials-table::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.813  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/add-user-credentials-id.xml::copy-data-to-new-user_credentials::kagemomiji
+2026-02-04 11:15:04.816  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.816  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/add-user-credentials-id.xml::copy-data-to-new-user_credentials::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.817  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/add-user-credentials-id.xml::drop-user_credentials_backup::kagemomiji
+2026-02-04 11:15:04.817  INFO --- liquibase.changelog.ChangeSet            : Table user_credentials_backup dropped
+2026-02-04 11:15:04.818  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/add-user-credentials-id.xml::drop-user_credentials_backup::kagemomiji ran successfully in 0ms
+2026-02-04 11:15:04.818  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/add-deleted-column-music-folder.xml::add-music-folder-deleted::kagemomiji
+2026-02-04 11:15:04.819  INFO --- liquibase.changelog.ChangeSet            : Columns deleted(boolean) added to music_folder
+2026-02-04 11:15:04.820  INFO --- liquibase.changelog.ChangeSet            : Data updated in music_folder
+2026-02-04 11:15:04.820  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/add-deleted-column-music-folder.xml::add-music-folder-deleted::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.820  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/remove-genre-name-duplication.xml::rename-genre-to-backup::kagemomiji
+2026-02-04 11:15:04.821  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.822  INFO --- liquibase.changelog.ChangeSet            : Table genre renamed to genre_backup
+2026-02-04 11:15:04.822  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/remove-genre-name-duplication.xml::rename-genre-to-backup::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.823  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/remove-genre-name-duplication.xml::create-new-genre-table::kagemomiji
+2026-02-04 11:15:04.823  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.824  INFO --- liquibase.changelog.ChangeSet            : Table genre created
+2026-02-04 11:15:04.824  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/remove-genre-name-duplication.xml::create-new-genre-table::kagemomiji ran successfully in 1ms
+2026-02-04 11:15:04.825  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/remove-genre-name-duplication.xml::copy-distinct-genre-data::kagemomiji
+2026-02-04 11:15:04.825  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.827  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.828  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/remove-genre-name-duplication.xml::copy-distinct-genre-data::kagemomiji ran successfully in 3ms
+2026-02-04 11:15:04.828  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/remove-genre-name-duplication.xml::drop-genre-backup-table::kagemomiji
+2026-02-04 11:15:04.829  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.830  INFO --- liquibase.changelog.ChangeSet            : Table genre_backup dropped
+2026-02-04 11:15:04.830  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/remove-genre-name-duplication.xml::drop-genre-backup-table::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.830  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/add-genre-pk.xml::add_genre_pk::kagemomiji
+2026-02-04 11:15:04.831  INFO --- l.s.SnapshotGeneratorFactory             : Creating snapshot
+2026-02-04 11:15:04.832  INFO --- liquibase.changelog.ChangeSet            : Primary key added to genre (name)
+2026-02-04 11:15:04.832  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/add-genre-pk.xml::add_genre_pk::kagemomiji ran successfully in 2ms
+2026-02-04 11:15:04.833  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/change-hsqldb-table-type.xml::change-hsqldb-table-type-to-cached::kagemomiji
+2026-02-04 11:15:04.838  INFO --- liquibase.changelog.ChangeSet            : Custom SQL executed
+2026-02-04 11:15:04.838  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/change-hsqldb-table-type.xml::change-hsqldb-table-type-to-cached::kagemomiji ran successfully in 5ms
+2026-02-04 11:15:04.839  INFO --- liquibase.ui.LoggerUIService             : Running Changeset: liquibase/11.1/add-locked-column-podcast-episode.xml::add-podcast-episode-locked::kagemomiji
+2026-02-04 11:15:04.840  INFO --- liquibase.changelog.ChangeSet            : Columns locked(boolean) added to podcast_episode
+2026-02-04 11:15:04.840  INFO --- liquibase.changelog.ChangeSet            : ChangeSet liquibase/11.1/add-locked-column-podcast-episode.xml::add-podcast-episode-locked::kagemomiji ran successfully in 1ms
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : UPDATE SUMMARY
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : Run:                        308
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : Previously run:               0
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : Filtered out:                 3
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : -------------------------------
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : Total change sets:          311
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : FILTERED CHANGE SETS SUMMARY
+2026-02-04 11:15:04.850  INFO --- liquibase.util.ShowSummaryUtil           : DBMS mismatch:                3
+2026-02-04 11:15:04.852  INFO --- liquibase.util.ShowSummaryUtil           : Update summary generated
+2026-02-04 11:15:04.856  INFO --- l.command.core.UpdateCommandStep         : Update command completed successfully.
+2026-02-04 11:15:04.856  INFO --- liquibase.ui.LoggerUIService             : Liquibase: Update has been successful. Rows affected: 441
+2026-02-04 11:15:04.857  INFO --- l.l.StandardLockService                  : Successfully released change log lock
+2026-02-04 11:15:04.857  INFO --- liquibase.command.CommandScope           : Command execution complete
+2026-02-04 11:15:08.142  WARN --- o.a.p.s.PasswordEncoderConfig            : Generating new encryption key password
+2026-02-04 11:15:08.143  WARN --- o.a.p.s.PasswordEncoderConfig            : Generating new encryption key salt
+2026-02-04 11:15:08.187  WARN --- o.a.p.s.GlobalSecurityConfig             : Generating new jwt key
+2026-02-04 11:15:08.232  INFO --- o.a.p.s.search.IndexManager              : Index directory was created (index version 19). 
+2026-02-04 11:15:08.235  INFO --- o.a.p.s.TaskSchedulingService            : Task mediascanner-IndexingTask scheduled
+2026-02-04 11:15:08.235  INFO --- o.a.p.s.MediaScannerService              : Automatic media library scanning scheduled to run every 1 day(s), starting at 2026-02-05T03:00:00.233377196
+2026-02-04 11:15:08.236  WARN --- o.a.p.s.search.IndexManager              : /config/index19/album does not exist. Please run a scan.
+2026-02-04 11:15:08.237  WARN --- o.a.p.s.search.IndexManager              : /config/index19/artist does not exist. Please run a scan.
+2026-02-04 11:15:08.237  WARN --- o.a.p.s.search.IndexManager              : /config/index19/song does not exist. Please run a scan.
+2026-02-04 11:15:08.237  WARN --- o.a.p.s.search.IndexManager              : /config/index19/album_id3 does not exist. Please run a scan.
+2026-02-04 11:15:08.237  WARN --- o.a.p.s.search.IndexManager              : /config/index19/artist_id3 does not exist. Please run a scan.
+2026-02-04 11:15:08.237  INFO --- o.a.p.s.MediaScannerService              : Media library never scanned. Doing it now.
+2026-02-04 11:15:08.237  INFO --- o.a.p.s.MediaScannerService              : Starting media library scan with timeout 3600 seconds.
+2026-02-04 11:15:08.238  INFO --- o.a.p.s.MediaScannerService              : Starting to scan media library.
+2026-02-04 11:15:08.668  WARN --- r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-02-04 11:15:08.691  INFO --- o.a.p.service.DatabaseService            : Automatic DB backup disabled
+2026-02-04 11:15:08.920  INFO --- o.a.p.s.MediaScannerService              : Scanned media library with 2 entries.
+2026-02-04 11:15:08.921  INFO --- o.a.p.s.MediaScannerService              : Persisting albums
+2026-02-04 11:15:08.921  INFO --- o.a.p.s.MediaScannerService              : Marking non-present albums.
+2026-02-04 11:15:08.921  INFO --- o.a.p.s.MediaScannerService              : Persisting artists
+2026-02-04 11:15:08.922  INFO --- o.a.p.s.MediaScannerService              : Marking non-present artists.
+2026-02-04 11:15:08.922  INFO --- o.a.p.s.MediaScannerService              : Persisting media files
+2026-02-04 11:15:08.922  INFO --- o.a.p.s.MediaScannerService              : Marking non-present media files.
+2026-02-04 11:15:08.922  INFO --- o.a.p.s.MediaScannerService              : Persisting genres
+2026-02-04 11:15:08.922  INFO --- o.a.p.s.MediaScannerService              : Updating genres
+2026-02-04 11:15:08.923  INFO --- o.a.p.s.MediaScannerService              : Genre persistence successfully complete: true
+2026-02-04 11:15:08.926  INFO --- o.a.p.s.MediaScannerService              : Album persistence complete
+2026-02-04 11:15:08.926  INFO --- o.a.p.s.MediaScannerService              : Artist persistence complete
+2026-02-04 11:15:08.940  WARN --- o.h.e.j.spi.SqlExceptionHelper           : SQL Warning Code: -1100, SQLState: 02000
+2026-02-04 11:15:08.940  WARN --- o.h.e.j.spi.SqlExceptionHelper           : no data
+2026-02-04 11:15:08.940  INFO --- o.a.p.s.MediaScannerService              : Media file persistence complete
+2026-02-04 11:15:08.940  INFO --- o.a.p.s.MediaScannerService              : Completed media library scan.
+2026-02-04 11:15:08.941  INFO --- o.a.p.s.MediaScannerService              : Media library scan took 0s
+2026-02-04 11:15:08.941  INFO --- o.a.p.s.MediaScannerService              : Media library scan completed.
+2026-02-04 11:15:08.941  INFO --- o.a.p.service.PlaylistService            : Starting playlist import.
+2026-02-04 11:15:08.946  INFO --- o.a.p.service.PlaylistService            : Completed playlist import.
+2026-02-04 11:15:09.172  INFO --- o.a.p.s.MediaScannerService              : Indexing complete.
+2026-02-04 11:15:10.454  INFO --- org.airsonic.player.Application          : Started Application in 16.503 seconds (process running for 16.987)
+2026-02-04 11:15:10.470  INFO --- o.a.p.s.TaskSchedulingService            : Task podcast-channel-refresh--1 scheduled
+2026-02-04 11:15:10.471  INFO --- o.a.p.s.PodcastManagementService         : Automatic default Podcast update scheduled to run every 24 hour(s), starting at 2026-02-04T10:20:10.470654438Z
+2026-02-04 11:15:10.471  INFO --- o.a.p.s.TaskSchedulingService            : Task remote-playstatus-cleanup scheduled
+2026-02-04 11:15:10.472  INFO --- o.a.player.service.PlayerService         : Deleting old players
+2026-02-04 11:15:10.476  INFO --- o.a.player.service.PlayerService         : Complete Deleting old players
