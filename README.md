@@ -6,3 +6,15 @@ It allows users on the same internal network to listen to music directly from th
 The project uses Docker containers to simplify deployment, configuration, and portability. Once started, RadioLan exposes a web interface where clients connected to the LAN can access the radio stream easily from any modern browser.
 
 RadioLan is ideal for schools, offices, labs, or home networks where a private, lightweight, and easy-to-deploy radio solution is needed. The containerized approach ensures consistency across environments and makes setup, start, and shutdown straightforward.
+
+## Getting Started
+
+### Prerequisites
+
+Before starting, ensure you have Docker installed on your system. You can use the provided script to verify your installation:
+
+```bash
+./check_docker.sh
+```
+
+This script will check if Docker is installed and if the daemon is running correctly.
