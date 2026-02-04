@@ -21,29 +21,37 @@ This script will check if Docker is installed and if the daemon is running corre
 
 ## Usage
 
-### Starting RadioLan (Airsonic)
+### Option A: Starting Airsonic (Classic Radio)
 
-To start the radio server, run:
-
+To start the Airsonic radio server:
 ```bash
 ./start_airsonic.sh
 ```
+- **Web UI:** `http://localhost:4040`
+- **Default Login:** `admin` / `admin`
 
-Once started, you can access the web interface at `http://localhost:4040`.
-- **Default Username:** `admin`
-- **Default Password:** `admin`
+### Option B: Starting Jellyfin (Modern Media Center)
+
+To start the Jellyfin server:
+```bash
+./start_jellyfin.sh
+```
+- **Web UI:** `http://localhost:8096`
+- **Setup:** Follow the on-screen wizard for the first run.
 
 ### Stopping RadioLan
 
-To stop the server and the container, run:
-
+To stop whichever server you are running, use the corresponding script:
 ```bash
 ./stop_airsonic.sh
+# OR
+./stop_jellyfin.sh
 ```
 
 ## Project Structure
 
-- `data/`: Contains persistent data for Airsonic (config, music, etc.)
-- `check_docker.sh`: Verification script for Docker prerequisites.
-- `docker-compose.yml`: Docker configuration for the Airsonic service.
-- `start_airsonic.sh` / `stop_airsonic.sh`: Management scripts.
+- `data/`: Persistent data for Airsonic and Jellyfin.
+- `check_docker.sh`: Verification script for Docker.
+- `docker-compose.yml`: Config for Airsonic.
+- `docker-compose.jellyfin.yml`: Config for Jellyfin.
+- `start_*.sh` / `stop_*.sh`: Management scripts.
