@@ -115,6 +115,39 @@
             color: var(--accent-color);
         }
 
+        .header-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 8px 20px;
+            border-radius: 99px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        .btn.active {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+
         /* Custom Scrollbar */
         .song-list::-webkit-scrollbar {
             width: 6px;
@@ -137,7 +170,12 @@
     <div class="container">
         <header>
             <h1>RadioLan Simple</h1>
-            <p style="color: var(--text-secondary)">Lightweight LAN Music Streamer</p>
+            <p style="color: var(--text-secondary); margin-bottom: 25px;">Lightweight LAN Music Streamer</p>
+            <div class="header-actions">
+                <button id="play-all-btn" class="btn">
+                    <span>▶</span> Play All
+                </button>
+            </div>
         </header>
 
         <div class="player-card">
@@ -157,26 +195,36 @@
         const audioPlayer = document.getElementById('audio-player');
         const songListElement = document.getElementById('song-list');
         const currentSongName = document.getElementById('current-song-name');
+        const playAllBtn = document.getElementById('play-all-btn');
+
+        let allSongs = [];
+        let currentSongIndex = -1;
+        let isPlayAllActive = false;
 
         async function loadSongs() {
             try {
                 const response = await fetch('/api/songs');
-                const songs = await response.json();
+                allSongs = await response.json();
 
-                if (songs.length === 0) {
+                if (allSongs.length === 0) {
                     songListElement.innerHTML = '<div class="empty-state">No MP3 files found in music folder.</div>';
                     return;
                 }
 
                 songListElement.innerHTML = '';
-                songs.forEach(song => {
+                allSongs.forEach((song, index) => {
                     const li = document.createElement('li');
                     li.className = 'song-item';
+                    li.id = `song-${index}`;
                     li.innerHTML = `
                         <div class="play-icon">▶</div>
                         <div>${song}</div>
                     `;
-                    li.onclick = () => playSong(song, li);
+                    li.onclick = () => {
+                        isPlayAllActive = false;
+                        playAllBtn.classList.remove('active');
+                        playSong(index);
+                    };
                     songListElement.appendChild(li);
                 });
             } catch (error) {
@@ -184,16 +232,44 @@
             }
         }
 
-        function playSong(song, element) {
+        function playSong(index) {
+            if (index < 0 || index >= allSongs.length) return;
+
+            currentSongIndex = index;
+            const song = allSongs[index];
+            const element = document.getElementById(`song-${index}`);
+
             // Update UI
             document.querySelectorAll('.song-item').forEach(el => el.classList.remove('active'));
-            element.classList.add('active');
+            if (element) {
+                element.classList.add('active');
+                element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
             currentSongName.textContent = song;
 
             // Load and play
             audioPlayer.src = `/stream/${encodeURIComponent(song)}`;
             audioPlayer.play();
         }
+
+        playAllBtn.onclick = () => {
+            isPlayAllActive = true;
+            playAllBtn.classList.add('active');
+            playSong(0);
+        };
+
+        audioPlayer.onended = () => {
+            if (isPlayAllActive) {
+                const nextIndex = currentSongIndex + 1;
+                if (nextIndex < allSongs.length) {
+                    playSong(nextIndex);
+                } else {
+                    isPlayAllActive = false;
+                    playAllBtn.classList.remove('active');
+                    currentSongName.textContent = "Finished playing all songs";
+                }
+            }
+        };
 
         loadSongs();
     </script>
