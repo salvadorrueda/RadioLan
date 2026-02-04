@@ -178,6 +178,9 @@
                 <button id="loop-btn" class="btn">
                     <span>🔄</span> Loop
                 </button>
+                <button id="shuffle-btn" class="btn">
+                    <span>🔀</span> Shuffle
+                </button>
             </div>
         </header>
 
@@ -200,11 +203,13 @@
         const currentSongName = document.getElementById('current-song-name');
         const playAllBtn = document.getElementById('play-all-btn');
         const loopBtn = document.getElementById('loop-btn');
+        const shuffleBtn = document.getElementById('shuffle-btn');
 
         let allSongs = [];
         let currentSongIndex = -1;
         let isPlayAllActive = false;
         let isLoopActive = false;
+        let isShuffleActive = false;
 
         async function loadSongs() {
             try {
@@ -276,17 +281,37 @@
             }
         };
 
+        shuffleBtn.onclick = () => {
+            isShuffleActive = !isShuffleActive;
+            if (isShuffleActive) {
+                shuffleBtn.classList.add('active');
+            } else {
+                shuffleBtn.classList.remove('active');
+            }
+        };
+
         audioPlayer.onended = () => {
             if (isPlayAllActive) {
-                const nextIndex = currentSongIndex + 1;
-                if (nextIndex < allSongs.length) {
+                if (isShuffleActive) {
+                    // Pick a random song that isn't the current one (if possible)
+                    let nextIndex = currentSongIndex;
+                    if (allSongs.length > 1) {
+                        while (nextIndex === currentSongIndex) {
+                            nextIndex = Math.floor(Math.random() * allSongs.length);
+                        }
+                    }
                     playSong(nextIndex);
-                } else if (isLoopActive) {
-                    playSong(0); // Restart playlist
                 } else {
-                    isPlayAllActive = false;
-                    playAllBtn.classList.remove('active');
-                    currentSongName.textContent = "Finished playing all songs";
+                    const nextIndex = currentSongIndex + 1;
+                    if (nextIndex < allSongs.length) {
+                        playSong(nextIndex);
+                    } else if (isLoopActive) {
+                        playSong(0); // Restart playlist
+                    } else {
+                        isPlayAllActive = false;
+                        playAllBtn.classList.remove('active');
+                        currentSongName.textContent = "Finished playing all songs";
+                    }
                 }
             } else if (isLoopActive) {
                 playSong(currentSongIndex); // Repeat current song
